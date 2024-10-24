@@ -23,7 +23,7 @@ function VerifyregistrationOtp({ result, newfk }) {
     const [otp, setOtp] = useState("");
 
     const initialValue = {
-        email:newfk.values.email,
+        mobile:newfk.values.mobile,
         otp: ""
     };
 
@@ -31,9 +31,10 @@ function VerifyregistrationOtp({ result, newfk }) {
         initialValues: initialValue,
         onSubmit: () => {
             const reqbody = {
-                email: fk.values.email,
+                mobile: fk.values.mobile,
                 otp: otp
             };
+            console.log(reqbody)
             VerifyregistrationOtp(reqbody);
         },
     });

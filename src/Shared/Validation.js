@@ -55,6 +55,7 @@ export const signupSchemaValidataon = Yup.object().shape({
     )
     .required("Mobile number is required"),
 });
+
 export const withdrawAmountSchemaValidaton = Yup.object().shape({
   email: Yup.string()
     .email("Invalid email address format")

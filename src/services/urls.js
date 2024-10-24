@@ -3,12 +3,11 @@ export const rupees = "₹";
 export const baseUrl = "https://admin.bngwin.live";
 export const fron_end_main_domain = "https://bngwin.live";
 
-export const newdomain1 = "https://api.bngwin.live";
-export const newdomain = "https://api.bngwin.live";
-export const admin = "https://admin.bngwin.live";
+export const newdomain1 = "http://192.168.18.183:9009";
+export const newdomain = "http://192.168.18.183:9009";
 
-export const dummy_aviator = "https://bng-live-timer-1.onrender.com";
-export const domain = "https://bng-live-timer-1.onrender.com";
+export const dummy_aviator = "http://192.168.18.183:9009";
+export const domain = "http://192.168.18.183:9009";
 export const public_chain = "https://tronscan.io/#/";
 export const telegram_url = "https://t.me/bnggofficial";
 export const facebook_url = "";
@@ -17,7 +16,7 @@ export const instagram_url = "";
 export const support_mail = "techbignetworkgame.55@gmail.com";
 
 // export const dummy_aviator = "http://192.168.18.183:9000";
-// export const domain = "http://192.168.18.183:9000";
+// export const domain = "http://192.168.18.183:9009";
 
 export const endpoint = {
   //node login api
@@ -71,9 +70,9 @@ export const endpoint = {
   color_winning: `${baseUrl}/api/colour_winning`,
   cash_deposit: `${baseUrl}/api/deposit`,
   payment_url: "https://vpayout.com/Upi_controller/insert_fund_request_online",
-  withdraw_payment: `${admin}/api/payout-request`,
+  withdraw_payment: `${baseUrl}/api/payout-request`,
 
-  payment_request: `${admin}/api/deposit-request`,
+  payment_request: `${baseUrl}/api/deposit-request`,
   registration_bonus: `${baseUrl}/api/welcom-bonus`,
   deposit_history: `${newdomain1}/api/v1/deposit-history-inr`,
   withdrawl_history: `${newdomain1}/api/v1/withdrawal-history-inr`,

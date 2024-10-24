@@ -130,6 +130,8 @@ function Register() {
     }
   );
   const result = data?.data?.data;
+console.log("result",fk)
+
 
   return (
     isOpenOTPBox ? <VerifyregistrationOtp result={result} newfk={fk} /> :
@@ -227,7 +229,7 @@ function Register() {
                   className="funp13"
                   sx={{ ...normalinput, width: '100%', }}
                   ml={2}
-                  id="mob"
+                  id="mobile"
                   name="mobile"
                   type="number"
                   value={fk.values.mobile}
@@ -276,9 +278,9 @@ function Register() {
                 <OutlinedInput
                   className="funp13"
                   placeholder="Enter password"
-                  name="password"
+                  name="pass"
                   sx={{ ...passwordinput, width: '100%', }}
-                  value={fk.values.password}
+                  value={fk.values.pass}
                   onChange={fk.handleChange}
                   onKeyDown={(e) => e.key === "Enter" && fk.handleSubmit()}
                   type={showPassword ? "text" : "password"}
@@ -300,8 +302,8 @@ function Register() {
                     </InputAdornment>
                   }
                 />
-                {fk.touched.password && fk.errors.password && (
-                  <div className="error">{fk.errors.password}</div>
+                {fk.touched.pass && fk.errors.pass && (
+                  <div className="error">{fk.errors.pass}</div>
                 )}
               </FormControl>
             </Box>
@@ -316,9 +318,9 @@ function Register() {
                 <OutlinedInput
                   className="funp13"
                   sx={{ ...passwordinput, width: '100%', }}
-                  name="confirmed_password"
-                  id="confirmed_password"
-                  value={fk.values.confirmed_password}
+                  name="confirmpass"
+                  id="confirmpass"
+                  value={fk.values.confirmpass}
                   onChange={fk.handleChange}
                   onKeyDown={(e) => e.key === "Enter" && fk.handleSubmit()}
                   placeholder="Enter confirm password"
@@ -342,8 +344,8 @@ function Register() {
                     </InputAdornment>
                   }
                 />
-                {fk.touched.confirmed_password && fk.errors.confirmed_password && (
-                  <div className="error">{fk.errors.confirmed_password}</div>
+                {fk.touched.confirmpass && fk.errors.confirmpass && (
+                  <div className="error">{fk.errors.confirmpass}</div>
                 )}
               </FormControl>
             </Box>
@@ -357,19 +359,19 @@ function Register() {
                 </Box>
                 <TextField
                   className="funp13"
-                  id="referral_code"
+                  id="refid"
                   placeholder="Enter Referral Code"
                   sx={{ ...normalinput, width: '100%', }}
-                  name="referral_code"
-                  value={fk.values.referral_code}
+                  name="refid"
+                  value={fk.values.refid}
                   onChange={fk.handleChange}
                   onKeyDown={(e) => e.key === "Enter" && fk.handleSubmit()}
                 />
-                {fk.touched.referral_code && fk.errors.referral_code ? (
-                  <div className="error">{fk.errors.referral_code}</div>
-                ) : fk.values.referral_code ? (
+                {fk.touched.refid && fk.errors.refid ? (
+                  <div className="error">{fk.errors.refid}</div>
+                ) : fk.values.refid ? (
                   result ? (
-                    <div className="no-error">Referral From: {result}</div>
+                    <div className="no-error">Referral From: {result?.full_name}</div>
                   ) : (
                     <div className="error">Invalid Referral Id</div>
                   )

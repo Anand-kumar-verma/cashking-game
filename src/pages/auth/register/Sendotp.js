@@ -26,12 +26,12 @@ import {
     const fk = useFormik({
       initialValues: initialValue,
       onSubmit: () => {
-        if(!fk.values.email){
-          toast(" Please enter email")
+        if(!fk.values.mobile){
+          toast(" Please enter mobile")
           return
         }
         const reqbody = {
-          email: fk.values.email ,
+          email: fk.values.mobile ,
         };
         Sendotp(reqbody);
       },
