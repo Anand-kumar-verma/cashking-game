@@ -256,10 +256,11 @@ function WinThreeMin({ gid }) {
                 <IconButton
                   key={i}
                   color="primary"
-                  className={`icobtn ${value === i ? "bg-green-600" : "bg-yellow-400"} cursor-pointer text-white`}
+                  className={`icobtn `}
                   onClick={() => setValue(i)}
+                  sx={{ background: value === i ? '#18B660' : '', color: value === i ? '#fff' : '#768096', '&:hover': { background: '#18B660' }, }}
                 >
-                  {i}X
+                  X{i}
                 </IconButton>
               ))}
             </Box>
