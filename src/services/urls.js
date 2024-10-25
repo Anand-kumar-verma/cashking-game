@@ -1,19 +1,19 @@
 export const rupees = "₹";
 // https://admin.bngwin.live/
-export const baseUrl = "https://admin.bngwin.live";
-export const fron_end_main_domain = "https://bngwin.live";
+export const baseUrl = "https://admin.cashkinggame.bet";
+export const fron_end_main_domain = "https://cashkinggame.bet";
 
-export const newdomain1 = "http://192.168.18.183:9009";
-export const newdomain = "http://192.168.18.183:9009";
+export const newdomain1 = "https://api.cashkinggame.bet";
+export const newdomain = "https://api.cashkinggame.bet";
 
-export const dummy_aviator = "http://192.168.18.183:9009";
-export const domain = "http://192.168.18.183:9009";
+export const dummy_aviator = "https://bng-live-timer-1.onrender.com";
+export const domain = "https://bng-live-timer-1.onrender.com";
 export const public_chain = "https://tronscan.io/#/";
-export const telegram_url = "https://t.me/bnggofficial";
+export const telegram_url = "";
 export const facebook_url = "";
-export const apk_url = "https://bngwin.live/app-debug.apk";
+export const apk_url = "";
 export const instagram_url = "";
-export const support_mail = "techbignetworkgame.55@gmail.com";
+export const support_mail = "";
 
 // export const dummy_aviator = "http://192.168.18.183:9000";
 // export const domain = "http://192.168.18.183:9009";
@@ -76,9 +76,7 @@ export const endpoint = {
   registration_bonus: `${baseUrl}/api/welcom-bonus`,
   deposit_history: `${newdomain1}/api/v1/deposit-history-inr`,
   withdrawl_history: `${newdomain1}/api/v1/withdrawal-history-inr`,
-  // deposit_bonus: `${baseUrl}/api/deposit-bonus`,
 
-  // referral_bonus: `${baseUrl}/api/refral-bonus`,
   daily_self_bet_income: `${baseUrl}/api/daily-self-bet-income`,
   daily_wallet_income: `${baseUrl}/api/daily-wallet-income`,
   daily_salary_income: `${newdomain1}/api/v1/daily-salary-icome`,
