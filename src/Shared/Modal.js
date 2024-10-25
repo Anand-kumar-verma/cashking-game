@@ -68,7 +68,7 @@ function MyModal() {
             overflow: "hidden",
           }}
         >
-          <Box sx={{ background: "#4D4D4C", padding: 1, textAlign: "center" }}>
+          <Box sx={{ background: "#F2413B", padding: 1, textAlign: "center" }}>
             <Typography id="modal-title" className="w fp15 fw500">
               Extra first deposit bonus
             </Typography>
@@ -86,24 +86,24 @@ function MyModal() {
           >
             <Box
               className="w95 w"
-              sx={{ p: 1, background: "#4D4D4C", borderRadius: "7px", my: 1 }}
+              sx={{ p: 1, background: "#fff", borderRadius: "7px", my: 1 }}
             >
               <Box className="">
                 <Box className="fcsb w">
-                  <Typography className="w fp14 fw500">
+                  <Typography className=" fp14 fw500" style={{ color: 'black' }}>
                     First deposit
-                    <span className=" fp13 fw400" style={{ color: bggold }}>
+                    <span className=" fp13 fw400" style={{ color: '#feaa57' }}>
                       200000
                     </span>{" "}
                   </Typography>
-                  <Typography className=" fp13" sx={{ color: bggold }}>
+                  <Typography className=" fp13" sx={{ color: '#feaa57' }}>
                     + ₹10,000.00
                   </Typography>
                 </Box>
                 <Typography
-                  className="w fp13"
+                  className=" fp13"
                   my={1}
-                  sx={{ lineHeight: "15px" }}
+                  sx={{ lineHeight: "15px", color: 'black' }}
                 >
                   Deposit 200000 for the first time and you will receive 10000
                   bonus
@@ -116,7 +116,7 @@ function MyModal() {
                     sx={{
                       textAlign: "center",
                       width: "60%",
-                      background: bgdarkgray,
+                      background: '#b8b8b8',
                       borderRadius: "10px",
                       m: 0,
                       p: 0,
@@ -126,7 +126,7 @@ function MyModal() {
                   >
                     0/200000
                   </Typography>
-                  <Button variant="outlined" sx={{ m: 0, p: "0px 8px" }}>
+                  <Button className="bnt" variant="outlined" sx={{ m: 0, p: "0px 8px" }}>
                     Deposit
                   </Button>
                 </Box>
@@ -134,24 +134,24 @@ function MyModal() {
             </Box>
             <Box
               className="w95 w"
-              sx={{ p: 1, background: "#4D4D4C", borderRadius: "7px", my: 1 }}
+              sx={{ p: 1, background: "#fff", borderRadius: "7px", my: 1 }}
             >
               <Box className="">
                 <Box className="fcsb w">
-                  <Typography className="w fp14 fw500">
+                  <Typography sx={{ color: 'black' }} className=" fp14 fw500">
                     First deposit
-                    <span className=" fp13 fw400" style={{ color: bggold }}>
+                    <span className=" fp13 fw400" style={{ color: '#feaa57' }}>
                       100000
                     </span>{" "}
                   </Typography>
-                  <Typography className=" fp13" sx={{ color: bggold }}>
+                  <Typography className=" fp13" sx={{ color: '#feaa57' }}>
                     + ₹5,000.00
                   </Typography>
                 </Box>
                 <Typography
-                  className="w fp13"
+                  className=" fp13"
                   my={1}
-                  sx={{ lineHeight: "15px" }}
+                  sx={{ lineHeight: "15px", color: 'black' }}
                 >
                   Deposit 100000 for the first time and you will receive 5000
                   bonus
@@ -164,7 +164,7 @@ function MyModal() {
                     sx={{
                       textAlign: "center",
                       width: "60%",
-                      background: bgdarkgray,
+                      background: '#b8b8b8',
                       borderRadius: "10px",
                       m: 0,
                       p: 0,
@@ -174,7 +174,7 @@ function MyModal() {
                   >
                     0/100000
                   </Typography>
-                  <Button variant="outlined" sx={{ m: 0, p: "0px 8px" }}>
+                  <Button variant="outlined" className="bnt" sx={{ m: 0, p: "0px 8px" }}>
                     Deposit
                   </Button>
                 </Box>
@@ -182,24 +182,24 @@ function MyModal() {
             </Box>
             <Box
               className="w95 w"
-              sx={{ p: 1, background: "#4D4D4C", borderRadius: "7px", my: 1 }}
+              sx={{ p: 1, background: "#fff", borderRadius: "7px", my: 1 }}
             >
               <Box className="">
                 <Box className="fcsb w">
-                  <Typography className="w fp14 fw500">
+                  <Typography sx={{ color: 'black' }} className=" fp14 fw500">
                     First deposit
-                    <span className=" fp13 fw400" style={{ color: bggold }}>
+                    <span className=" fp13 fw400" style={{ color: '#feaa57' }}>
                       30000
                     </span>{" "}
                   </Typography>
-                  <Typography className=" fp13" sx={{ color: bggold }}>
+                  <Typography className=" fp13" sx={{ color: '#feaa57' }}>
                     + ₹2,000.00
                   </Typography>
                 </Box>
                 <Typography
-                  className="w fp13"
+                  className=" fp13"
                   my={1}
-                  sx={{ lineHeight: "15px" }}
+                  sx={{ lineHeight: "15px", color: 'black' }}
                 >
                   Deposit 30000 for the first time and you will receive 2000
                   bonus
@@ -212,7 +212,7 @@ function MyModal() {
                     sx={{
                       textAlign: "center",
                       width: "60%",
-                      background: bgdarkgray,
+                      background: '#b8b8b8',
                       borderRadius: "10px",
                       m: 0,
                       p: 0,
@@ -222,7 +222,7 @@ function MyModal() {
                   >
                     0/30000
                   </Typography>
-                  <Button variant="outlined" sx={{ m: 0, p: "0px 8px" }}>
+                  <Button variant="outlined" className="bnt" sx={{ m: 0, p: "0px 8px" }}>
                     Deposit
                   </Button>
                 </Box>
@@ -230,24 +230,24 @@ function MyModal() {
             </Box>
             <Box
               className="w95 w"
-              sx={{ p: 1, background: "#4D4D4C", borderRadius: "7px", my: 1 }}
+              sx={{ p: 1, background: "#fff", borderRadius: "7px", my: 1 }}
             >
               <Box className="">
                 <Box className="fcsb w">
-                  <Typography className="w fp14 fw500">
+                  <Typography sx={{ color: 'black' }} className=" fp14 fw500">
                     First deposit
-                    <span className=" fp13 fw400" style={{ color: bggold }}>
+                    <span className=" fp13 fw400" style={{ color: '#feaa57' }}>
                       10000
                     </span>{" "}
                   </Typography>
-                  <Typography className=" fp13" sx={{ color: bggold }}>
+                  <Typography className=" fp13" sx={{ color: '#feaa57' }}>
                     + ₹600.00
                   </Typography>
                 </Box>
                 <Typography
-                  className="w fp13"
+                  className=" fp13"
                   my={1}
-                  sx={{ lineHeight: "15px" }}
+                  sx={{ lineHeight: "15px", color: 'black' }}
                 >
                   Deposit 10000 for the first time and you will receive 600
                   bonus
@@ -260,7 +260,7 @@ function MyModal() {
                     sx={{
                       textAlign: "center",
                       width: "60%",
-                      background: bgdarkgray,
+                      background: '#b8b8b8',
                       borderRadius: "10px",
                       m: 0,
                       p: 0,
@@ -270,7 +270,7 @@ function MyModal() {
                   >
                     0/10000
                   </Typography>
-                  <Button variant="outlined" sx={{ m: 0, p: "0px 8px" }}>
+                  <Button variant="outlined" className="bnt" sx={{ m: 0, p: "0px 8px" }}>
                     Deposit
                   </Button>
                 </Box>
@@ -278,24 +278,24 @@ function MyModal() {
             </Box>
             <Box
               className="w95 w"
-              sx={{ p: 1, background: "#4D4D4C", borderRadius: "7px", my: 1 }}
+              sx={{ p: 1, background: "#fff", borderRadius: "7px", my: 1 }}
             >
               <Box className="">
                 <Box className="fcsb w">
-                  <Typography className="w fp14 fw500">
+                  <Typography sx={{ color: 'black' }} className=" fp14 fw500">
                     First deposit
-                    <span className=" fp13 fw400" style={{ color: bggold }}>
+                    <span className=" fp13 fw400" style={{ color: '#feaa57' }}>
                       3000
                     </span>{" "}
                   </Typography>
-                  <Typography className=" fp13" sx={{ color: bggold }}>
+                  <Typography className=" fp13" sx={{ color: '#feaa57' }}>
                     + ₹300.00
                   </Typography>
                 </Box>
                 <Typography
-                  className="w fp13"
+                  className=" fp13"
                   my={1}
-                  sx={{ lineHeight: "15px" }}
+                  sx={{ lineHeight: "15px", color: 'black' }}
                 >
                   Deposit 3000 for the first time and you will receive 300 bonus
                 </Typography>
@@ -307,7 +307,7 @@ function MyModal() {
                     sx={{
                       textAlign: "center",
                       width: "60%",
-                      background: bgdarkgray,
+                      background: '#b8b8b8',
                       borderRadius: "10px",
                       m: 0,
                       p: 0,
@@ -317,7 +317,7 @@ function MyModal() {
                   >
                     0/3000
                   </Typography>
-                  <Button variant="outlined" sx={{ m: 0, p: "0px 8px" }}>
+                  <Button variant="outlined" className="bnt" sx={{ m: 0, p: "0px 8px" }}>
                     Deposit
                   </Button>
                 </Box>
@@ -325,24 +325,24 @@ function MyModal() {
             </Box>
             <Box
               className="w95 w"
-              sx={{ p: 1, background: "#4D4D4C", borderRadius: "7px", my: 1 }}
+              sx={{ p: 1, background: "#fff", borderRadius: "7px", my: 1 }}
             >
               <Box className="">
                 <Box className="fcsb w">
-                  <Typography className="w fp14 fw500">
+                  <Typography sx={{ color: 'black' }} className=" fp14 fw500">
                     First deposit
-                    <span className=" fp13 fw400" style={{ color: bggold }}>
+                    <span className=" fp13 fw400" style={{ color: '#feaa57' }}>
                       1000
                     </span>{" "}
                   </Typography>
-                  <Typography className=" fp13" sx={{ color: bggold }}>
+                  <Typography className=" fp13" sx={{ color: '#feaa57' }}>
                     + ₹150.00
                   </Typography>
                 </Box>
                 <Typography
-                  className="w fp13"
+                  className=" fp13"
                   my={1}
-                  sx={{ lineHeight: "15px" }}
+                  sx={{ lineHeight: "15px", color: 'black' }}
                 >
                   Deposit 1000 for the first time and you will receive 150 bonus
                 </Typography>
@@ -354,7 +354,7 @@ function MyModal() {
                     sx={{
                       textAlign: "center",
                       width: "60%",
-                      background: bgdarkgray,
+                      background: '#b8b8b8',
                       borderRadius: "10px",
                       m: 0,
                       p: 0,
@@ -364,7 +364,7 @@ function MyModal() {
                   >
                     0/1000
                   </Typography>
-                  <Button variant="outlined" sx={{ m: 0, p: "0px 8px" }}>
+                  <Button variant="outlined" className="bnt" sx={{ m: 0, p: "0px 8px" }}>
                     Deposit
                   </Button>
                 </Box>
@@ -372,24 +372,24 @@ function MyModal() {
             </Box>
             <Box
               className="w95 w"
-              sx={{ p: 1, background: "#4D4D4C", borderRadius: "7px", my: 1 }}
+              sx={{ p: 1, background: "#fff", borderRadius: "7px", my: 1 }}
             >
               <Box className="">
                 <Box className="fcsb w">
-                  <Typography className="w fp14 fw500">
+                  <Typography sx={{ color: 'black' }} className=" fp14 fw500">
                     First deposit
-                    <span className=" fp13 fw400" style={{ color: bggold }}>
+                    <span className=" fp13 fw400" style={{ color: '#feaa57' }}>
                       300
                     </span>{" "}
                   </Typography>
-                  <Typography className=" fp13" sx={{ color: bggold }}>
+                  <Typography className=" fp13" sx={{ color: '#feaa57' }}>
                     + ₹60.00
                   </Typography>
                 </Box>
                 <Typography
-                  className="w fp13"
+                  className=" fp13"
                   my={1}
-                  sx={{ lineHeight: "15px" }}
+                  sx={{ lineHeight: "15px", color: 'black' }}
                 >
                   Deposit 300 for the first time and you will receive 60 bonus
                 </Typography>
@@ -401,7 +401,7 @@ function MyModal() {
                     sx={{
                       textAlign: "center",
                       width: "60%",
-                      background: bgdarkgray,
+                      background: '#b8b8b8',
                       borderRadius: "10px",
                       m: 0,
                       p: 0,
@@ -411,7 +411,7 @@ function MyModal() {
                   >
                     0/300
                   </Typography>
-                  <Button variant="outlined" sx={{ m: 0, p: "0px 8px" }}>
+                  <Button variant="outlined" className="bnt" sx={{ m: 0, p: "0px 8px" }}>
                     Deposit
                   </Button>
                 </Box>
@@ -419,24 +419,24 @@ function MyModal() {
             </Box>
             <Box
               className="w95 w"
-              sx={{ p: 1, background: "#4D4D4C", borderRadius: "7px", my: 1 }}
+              sx={{ p: 1, background: "#fff", borderRadius: "7px", my: 1 }}
             >
               <Box className="">
                 <Box className="fcsb w">
-                  <Typography className="w fp14 fw500">
+                  <Typography sx={{ color: 'black' }} className=" fp14 fw500">
                     First deposit
-                    <span className=" fp13 fw400" style={{ color: bggold }}>
+                    <span className=" fp13 fw400" style={{ color: '#feaa57' }}>
                       100
                     </span>{" "}
                   </Typography>
-                  <Typography className=" fp13" sx={{ color: bggold }}>
+                  <Typography className=" fp13" sx={{ color: '#feaa57' }}>
                     + ₹20.00
                   </Typography>
                 </Box>
                 <Typography
-                  className="w fp13"
+                  className=" fp13"
                   my={1}
-                  sx={{ lineHeight: "15px" }}
+                  sx={{ lineHeight: "15px", color: 'black' }}
                 >
                   Deposit 100 for the first time and you will receive 20 bonus
                 </Typography>
@@ -448,7 +448,7 @@ function MyModal() {
                     sx={{
                       textAlign: "center",
                       width: "60%",
-                      background: bgdarkgray,
+                      background: '#b8b8b8',
                       borderRadius: "10px",
                       m: 0,
                       p: 0,
@@ -458,7 +458,7 @@ function MyModal() {
                   >
                     0/100
                   </Typography>
-                  <Button variant="outlined" sx={{ m: 0, p: "0px 8px" }}>
+                  <Button variant="outlined" className="bnt" sx={{ m: 0, p: "0px 8px" }}>
                     {" "}
                     Deposit
                   </Button>
@@ -475,13 +475,13 @@ function MyModal() {
                 control={
                   <Checkbox
                     onClick={Status}
-                    sx={{ color: bggold }}
+                    sx={{ color: '#feaa57' }}
                     value=""
                     color="primary"
                   />
                 }
               />
-              <Typography variant="body1" className="w fp13 ">
+              <Typography variant="body1" className=" fp13 " sx={{ color: 'black' }}>
                 No more reminders today
               </Typography>
               <Button
@@ -517,7 +517,7 @@ function MyModal() {
           </Box>
         </Box>
       </Modal>
-    </div>
+    </div >
   );
 }
 
