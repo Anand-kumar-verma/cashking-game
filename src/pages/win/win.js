@@ -7,6 +7,7 @@ import {
   Button,
   Container,
   Dialog,
+  Drawer,
   IconButton,
   Stack,
   Typography,
@@ -288,12 +289,17 @@ function Win() {
         {Tab === 3 && <WinFiveMin gid="3" />}
         {/* opendialogbox */}
         {opendialogbox && (
-          <Dialog
+          <Drawer
             open={opendialogbox}
+            anchor="bottom" 
             PaperProps={{
               style: {
                 backgroundColor: "transparent",
                 boxShadow: "none",
+                position: "fixed",
+                bottom: 0, 
+                left: 0, 
+                right: 0, 
               },
             }}
           >
@@ -306,7 +312,7 @@ function Win() {
                 <CancelIcon className="!text-white" />
               </IconButton>
             </p>
-          </Dialog>
+          </Drawer>
         )}
         {/* <CustomCircularProgress isLoading={walletloding} /> */}
       </Container>

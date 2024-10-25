@@ -5,6 +5,7 @@ import {
   Box,
   Button,
   DialogContentText,
+  Drawer,
   IconButton,
   Stack,
   TextField,
@@ -113,11 +114,12 @@ const ApplyBetDialogBox = ({
   }
 
   return (
-    <Dialog
+    <Drawer
+     anchor="bottom"
       open={apply_bit_dialog_box}
       TransitionComponent={Transition}
       keepMountedonClose={() => setapply_bit_dialog_box(false)}
-      className="dialogsmall"
+      
     >
       <Box>
         <Stack
@@ -288,7 +290,7 @@ const ApplyBetDialogBox = ({
           </DialogContentText>
         </Dialog>
       </Stack>
-      <Stack direction="row" className="agree-btn-two">
+      <Stack direction="row" className="agree-btn-two !pb-16">
         <Button
           className="!text-white"
           variant="text"
@@ -306,7 +308,7 @@ const ApplyBetDialogBox = ({
       </Stack>
 
       <CustomCircularProgress isLoading={loding} />
-    </Dialog>
+    </Drawer>
   );
 };
 
