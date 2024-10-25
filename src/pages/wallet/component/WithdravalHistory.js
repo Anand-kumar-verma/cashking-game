@@ -76,7 +76,7 @@ function WithdravalHistory() {
                     mb: 2,
                     padding: "15px",
                     borderRadius: "10px",
-                    background: '#fff',
+                    background: '#e5e5e573',
                   }}
                 >
                   <Stack

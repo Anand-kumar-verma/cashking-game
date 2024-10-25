@@ -77,7 +77,7 @@ function DepositeHistory() {
                     mb: 2,
                     padding: "15px",
                     borderRadius: "10px",
-
+                    background: '#e5e5e573',
                   }}
                 >
                   <Stack
