@@ -10,6 +10,30 @@ const theme = createTheme({
         },
       },
     },
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          "& input:-webkit-autofill": {
+            WebkitBoxShadow: "0 0 0 100px #fff inset",
+            WebkitTextFillColor: "#000",
+          },
+        },
+      },
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          "& input:-webkit-autofill": {
+            WebkitBoxShadow: "0 0 0 100px #fff inset",
+            WebkitTextFillColor: "black",
+            borderRadius: 'inherit',
+          },
+          "&.Mui-focused input:-webkit-autofill": {
+            WebkitBoxShadow: "0 0 0 100px #fff inset",
+          },
+        },
+      },
+    },
   },
   palette: {
     primary: {
