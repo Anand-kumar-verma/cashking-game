@@ -34,7 +34,7 @@ import WinThirtyMin from "./component/WinOneMin/WinthirtyMin";
 function Win() {
   const client = useQueryClient();
   const navigate = useNavigate();
-  const [Tab, setTab] = useState(1);
+  const [Tab, setTab] = useState(4);
   const [opendialogbox, setOpenDialogBox] = useState(false);
   const isAppliedbet = localStorage.getItem("betApplied");
   const dummycounter = useSelector((state) => state.aviator.dummycounter);
@@ -291,17 +291,14 @@ function Win() {
         {Tab === 4 && <WinThirtyMin gid="4" />}
         {/* opendialogbox */}
         {opendialogbox && (
-          <Drawer
+          <Dialog
             open={opendialogbox}
-            anchor="bottom"
             PaperProps={{
               style: {
                 backgroundColor: "transparent",
                 boxShadow: "none",
-                position: "fixed",
-                bottom: 0,
-                left: 0,
-                right: 0,
+            
+                
               },
             }}
           >
@@ -314,7 +311,7 @@ function Win() {
                 <CancelIcon className="!text-white" />
               </IconButton>
             </p>
-          </Drawer>
+          </Dialog>
         )}
         {/* <CustomCircularProgress isLoading={walletloding} /> */}
       </Container>

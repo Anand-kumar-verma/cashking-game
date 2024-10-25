@@ -5,6 +5,9 @@ export const fron_end_main_domain = "https://cashkinggame.bet";
 
 export const newdomain1 = "https://api.cashkinggame.bet";
 export const newdomain = "https://api.cashkinggame.bet";
+// export const newdomain1 = "http://192.168.18.183:9009";
+// export const newdomain = "http://192.168.18.183:9009";
+
 
 export const dummy_aviator = "https://bng-live-timer-1.onrender.com";
 export const domain = "https://bng-live-timer-1.onrender.com";
