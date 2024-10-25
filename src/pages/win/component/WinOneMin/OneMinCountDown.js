@@ -290,7 +290,7 @@ const OneMinCountDown = ({ fk, setBetNumber }) => {
           </Typography>
           {React.useMemo(() => {
             return (
-              <Stack direction="row">
+              <Stack direction="row" sx={{ justifyContent: 'end', alignItems: 'center' }}>
                 <Box className="timerBoxone">0</Box>
                 <Box className="timerBox">0</Box>
                 <Box className={"!text-white !font-bold !text-lg"}>:</Box>

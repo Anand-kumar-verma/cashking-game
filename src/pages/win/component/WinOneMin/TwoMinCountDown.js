@@ -314,7 +314,7 @@ const TwoMinCountDown = ({ fk, setBetNumber }) => {
           <Typography variant="h3" color="initial" className="winTextone">
             Time remaining
           </Typography>
-          <Stack direction="row">
+          <Stack direction="row" sx={{ justifyContent: 'end', alignItems: 'center' }}>
             {React.useMemo(() => {
               return (
                 <>

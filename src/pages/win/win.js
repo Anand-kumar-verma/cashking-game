@@ -76,7 +76,7 @@ function Win() {
   }, []);
 
   return (
-    <Layout header={true}>
+    <Layout header={true} footer={false}>
       <Box className="winbgo"></Box>
       <Container sx={styles.root}>
         <Box
@@ -84,13 +84,13 @@ function Win() {
             position: "relative",
             overflow: "hidden",
             py: 2,
-            mt: '-44vh',
+            mt: '-37vh',
           }}
         >
           <Box sx={{ px: 2, pb: 2, position: "relative" }}>
             <Box
               sx={{
-                background: bglightgray,
+                background: '#fff',
                 padding: "15px 10px",
                 borderRadius: "10px",
                 my: 0,
@@ -171,7 +171,7 @@ function Win() {
               justifyContent: "space-between",
               px: 1,
               py: 1,
-              background: bglightgray,
+              background: '#fff',
               borderRadius: "10PX",
               // mt: 2,
               // mb: 2,
@@ -293,15 +293,15 @@ function Win() {
         {opendialogbox && (
           <Drawer
             open={opendialogbox}
-            anchor="bottom" 
+            anchor="bottom"
             PaperProps={{
               style: {
                 backgroundColor: "transparent",
                 boxShadow: "none",
                 position: "fixed",
-                bottom: 0, 
-                left: 0, 
-                right: 0, 
+                bottom: 0,
+                left: 0,
+                right: 0,
               },
             }}
           >

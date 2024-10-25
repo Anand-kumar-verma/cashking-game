@@ -237,17 +237,17 @@ function WinOneMin({ gid }) {
               <Button variant="outlined" color="primary" onClick={generateRandomType}>
                 Random
               </Button>
-              {[1, 5, 10, 20, 50, 100]?.map((i) => (
+              {[1, 5, 10, 20, 50, 100].map((i) => (
                 <IconButton
                   key={i}
                   color="primary"
-                  className={`icobtn ${value === i ? "bg-green-600" : "bg-green-400"} cursor-pointer text-white`}
+                  className={`icobtn  cursor-pointer`}
                   onClick={() => setValue(i)}
+                  sx={{ background: value === i ? '#18B660' : '', color: value === i ? '#fff' : '#768096', '&:hover': { background: '#18B660' }, }}
                 >
-                  {i}X
+                  X{i}
                 </IconButton>
               ))}
-
             </Box>
 
             <div className="!w-full !grid grid-cols-2  !mt-2">
@@ -333,6 +333,7 @@ function WinOneMin({ gid }) {
       {
         apply_bit_dialog_box && Number(timing) >= 10 && (
           <ApplyBetDialogBox
+            sx={{ background: 'transparent !important' }}
             apply_bit_dialog_box={apply_bit_dialog_box}
             setapply_bit_dialog_box={setapply_bit_dialog_box}
             type={dialog_type}

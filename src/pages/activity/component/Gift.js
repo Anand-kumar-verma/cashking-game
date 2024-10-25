@@ -103,7 +103,7 @@ function Gift() {
         <Box sx={styles.emp} component='img' src={gift}></Box>
       </Box>
       <Box sx={{ minHeight: '100vh', padding: '16px', }}>
-        <Card sx={{ backgroundColor: '#bcbcbc', color: '#fff', borderRadius: '8px', marginBottom: '16px', }}>
+        <Card sx={{ color: 'black', marginBottom: '16px', }}>
           <CardContent><Typography className='w f15 fw500'>Hi</Typography>
             <Typography variant="body2" sx={{ marginBottom: '10px' }}>We have a gift for you</Typography>
             <Typography variant="body2">Please enter the gift code below</Typography>
@@ -131,7 +131,7 @@ function Gift() {
         </Card>
         {response?.map((item) => {
           return <>
-            <Card sx={{ backgroundColor: '#bcbcbc', color: '#fff', borderRadius: '8px', marginBottom: '16px', }}>
+            <Card sx={{ color: '#black', borderRadius: '8px', marginBottom: '16px', }}>
               <CardContent sx={{ padding: '16px !important' }}>
                 <Box sx={{ marginBottom: '16px' }} className="!w-full !flex !justify-between">
                   <div className='!flex '>  <HistoryEduOutlined sx={{ color: bggold, marginRight: '8px' }} />

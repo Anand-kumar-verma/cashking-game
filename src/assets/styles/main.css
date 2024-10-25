@@ -601,21 +601,21 @@ img {
 }
 
 .greembtn {
-  background: #30b539 !important;
+  background: #18B660 !important;
   color: white !important;
   text-transform: capitalize !important;
   border-radius: 0px 10px 0px 10px !important;
 }
 
 .greemviolet {
-  background: #710193 !important;
+  background: #C86EFF !important;
   color: white !important;
   text-transform: capitalize !important;
   border-radius: 10px !important;
 }
 
 .greemred {
-  background: red !important;
+  background: #FB5B5B !important;
   color: white !important;
   text-transform: capitalize !important;
   border-radius: 10px 0px 10px 0px !important;
@@ -952,13 +952,14 @@ img {
 .addbtnbox {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-top: 5px;
+  justify-content: end;
 }
 
 .addbtnbox>button {
-  color: #ffffff !important;
   border: 0 !important;
+  min-width: 10px !important;
+  padding: 3px 11px !important;
+  margin-left: 10px;
 }
 
 .dialogsmallbat>p:nth-last-child(1) {
@@ -968,8 +969,6 @@ img {
 }
 
 .bat-price-input-box>button {
-  border: 1px solid #63BA0E;
-  color: #63BA0E;
   border-radius: 0;
   border-radius: 5px;
   width: 35px;
@@ -977,24 +976,31 @@ img {
   margin: 0px 15px;
 }
 
+.bat-price-input-box>button:nth-child(2) {
+  margin-right: 0 !important;
+}
+
+
+
 .bat-price-input-box>div {
   width: 100%;
 }
 
 .bat-price-input-box>div>div>input {
-  border-radius: 10px;
-  width: 100%;
+
+  width: 100px !important;
   padding: 0.5rem 0.75rem;
   line-height: 1.17333rem;
-  color: #63BA0E;
+  color: #000000;
   background-color: white;
-  border-radius: 0.26667rem;
   border: 0 !important;
   text-align: center;
+  font-size: 15px !important;
+  font-weight: 500 !important;
 }
 
 .bat-price-input-box>div>div>fieldset {
-  border: 1px solid red;
+  border: 1px solid transparent;
   color: 'red'
 }
 
@@ -1020,28 +1026,39 @@ img {
 }
 
 .agree-btn {
-  padding: 0px 15px;
+  padding: 0px 25px;
 }
 
 .agree-btn>label>span {
-  color: #FE0000 !important;
-  font-weight: 600;
+  color: #FB5B5B !important;
+  font-weight: 400;
+  font-size: 12px;
+  border-radius: 50%;
 }
 
-
-.agree-btn-two {
-  padding: 0px 0px 10px 15px;
+.agree-btn>label>span:nth-child(2) {
+  color: #000000 !important;
+  font-weight: 400;
+  font-size: 12px;
+  margin-right: 0 !important;
 }
+
 
 .agree-btn-two>button:nth-child(1) {
-  background-color: #30b539;
-  color: white;
+  background-color: transparent;
+  color: rgb(137, 137, 137);
+  width: 35%;
+  border-radius: 0px;
+  text-transform: capitalize;
+  padding: 10px;
 }
 
 .agree-btn-two>button:nth-child(2) {
-  background-color: #FE0000;
+  width: 65%;
   color: white;
-  margin-left: 15px;
+  border-radius: 0px;
+  text-transform: capitalize;
+  padding: 10px;
 }
 
 .Rules-dialog {
@@ -1575,14 +1592,12 @@ img {
 }
 
 .icobtn {
-  background: #63BA0E !important;
-  border: navajowhite !important;
-  color: white !important;
+  border: none;
   width: 35px !important;
   padding: 6px 10px !important;
   border-radius: 5px !important;
   font-size: 13px !important;
-  font-weight: 700 !important;
+  font-weight: 400 !important;
 }
 
 td {
@@ -1949,9 +1964,9 @@ td {
 
 .winbgo {
   width: 100%;
-  height: 53vh;
+  height: 44vh;
   background: red;
-  border-radius: 0% 0% 20% 20%;
+  border-radius: 0% 0% 10% 10%;
 
 }
 
@@ -1964,4 +1979,8 @@ td {
 .Mui-focused .MuiOutlinedInput-notchedOutline {
   border-color: #e0e0e0 !important;
   border-width: 1px !important;
+}
+
+.MuiDrawer-root {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
