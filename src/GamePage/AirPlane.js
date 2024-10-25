@@ -458,7 +458,7 @@ const AirPlane = ({ formik, fk }) => {
                   <span className="col-span-2">{`${seconds}.${String(
                     milliseconds
                   ).padStart(2, "0")}`}</span>
-                  <span style={{ marginLeft: "4px" }}>x</span>
+                  <span style={{ marginLeft: "8px" }}>x</span>
                 </div>
             </p>
           )}

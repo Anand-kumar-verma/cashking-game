@@ -9,8 +9,8 @@ export const newdomain = "https://api.cashkinggame.bet";
 // export const newdomain = "http://192.168.18.183:9009";
 
 
-export const dummy_aviator = "https://bng-live-timer-1.onrender.com";
-export const domain = "https://bng-live-timer-1.onrender.com";
+export const dummy_aviator = "https://cashking-timer.onrender.com";
+export const domain = "https://cashking-timer.onrender.com";
 export const public_chain = "https://tronscan.io/#/";
 export const telegram_url = "";
 export const facebook_url = "";
