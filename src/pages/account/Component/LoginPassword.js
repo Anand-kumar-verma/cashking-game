@@ -146,14 +146,14 @@ function LoginPassword() {
             <Box mt={2}>
               <FormControl fullWidth>
                 <Stack direction="row" className="loginlabel">
-                  <Typography variant="h3" sx={{ color: "white" }}>
+                  <Typography variant="h3" sx={{ color: "BLACK" }}>
                     Old password
                   </Typography>
                 </Stack>
 
                 <TextField
                   sx={{
-                    background: "#E7E7E7",
+
                     borderRadius: "5px",
                   }}
                   placeholder="Enter password"
@@ -187,13 +187,13 @@ function LoginPassword() {
             <Box mt={2}>
               <FormControl fullWidth>
                 <Stack direction="row" className="loginlabel">
-                  <Typography variant="h3" sx={{ color: "white" }}>
+                  <Typography variant="h3" sx={{ color: "BLACK" }}>
                     Set new password
                   </Typography>
                 </Stack>
                 <TextField
                   sx={{
-                    background: "#E7E7E7",
+
                     borderRadius: "5px",
                   }}
                   placeholder="Enter new password"
@@ -228,13 +228,13 @@ function LoginPassword() {
             <Box mt={2}>
               <FormControl fullWidth>
                 <Stack direction="row" className="loginlabel">
-                  <Typography variant="h3" sx={{ color: "white" }}>
+                  <Typography variant="h3" sx={{ color: "BLACK" }}>
                     Confirm new password
                   </Typography>
                 </Stack>
                 <TextField
                   sx={{
-                    background: "#E7E7E7",
+
                     borderRadius: "5px",
                   }}
                   className="withdrawalfield2"
