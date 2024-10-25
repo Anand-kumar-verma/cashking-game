@@ -29,6 +29,7 @@ import WinFiveMin from "./component/WinOneMin/WinFiveMin";
 import WinLossPopup from "./component/WinOneMin/WinLossPopup";
 import WinOneMin from "./component/WinOneMin/WinOneMin";
 import WinThreeMin from "./component/WinOneMin/WinThreeMin";
+import WinThirtyMin from "./component/WinOneMin/WinthirtyMin";
 
 function Win() {
   const client = useQueryClient();
@@ -283,10 +284,11 @@ function Win() {
             </NavLink>
           </Box>
         </Box>
-        {Tab === 4 && <WinOneMin gid="4" />}
+       
         {Tab === 1 && <WinOneMin gid="1" />}
         {Tab === 2 && <WinThreeMin gid="2" />}
         {Tab === 3 && <WinFiveMin gid="3" />}
+        {Tab === 4 && <WinThirtyMin gid="4" />}
         {/* opendialogbox */}
         {opendialogbox && (
           <Drawer
