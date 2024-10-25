@@ -390,12 +390,12 @@ const PlayGame = () => {
     );
   }, [audioRefMusic, audioRefSound, backgroundMusic_url]);
 
-  if (isLoading)
-    return (
-      <div className="flex justify-center items-center">
-        <CircularProgress />
-      </div>
-    );
+  // if (isLoading)
+  //   return (
+  //     <div className="flex justify-center items-center">
+  //       <CircularProgress />
+  //     </div>
+  //   );
 
   // if (waiting_aviator)
   //   return (
