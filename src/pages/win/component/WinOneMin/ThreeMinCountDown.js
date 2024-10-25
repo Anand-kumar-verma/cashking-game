@@ -43,6 +43,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 const ThreeMinCountDown = ({ fk, setBetNumber }) => {
   const socket = useSocket();
+  let preValue = 0;
   const dispatch = useDispatch();
   const client = useQueryClient();
   const [poicy, setpoicy] = React.useState(false);
@@ -76,7 +77,13 @@ const ThreeMinCountDown = ({ fk, setBetNumber }) => {
   };
   React.useEffect(() => {
     const handleFiveMin = (onemin) => {
-      let fivemin = `${4 - (new Date()?.getMinutes() % 5)}_${onemin}`;
+      const t = Number(String(onemin)?.split("_")?.[1]);
+      const min = Number(String(onemin)?.split("_")?.[0]);
+      const time_to_be_intro = t > 0 ? 60 - t : t;
+      let fivemin = `${
+        4 - (Number(t === 0 ? preValue : min) % 5)
+      }_${time_to_be_intro}`;
+      preValue = min;
       setOne_min_time(fivemin);
       setBetNumber(fivemin);
       fk.setFieldValue("show_this_one_min_time", fivemin);

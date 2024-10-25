@@ -74,20 +74,22 @@ const OneMinCountDown = ({ fk, setBetNumber }) => {
 
   React.useEffect(() => {
     const handleOneMin = (onemin) => {
-      setOne_min_time(onemin);
-      setBetNumber(onemin);
-      fk.setFieldValue("show_this_one_min_time", onemin);
-      if (onemin === 5 || onemin === 4 || onemin === 3 || onemin === 2) {
+      const t = Number(String(onemin)?.split("_")?.[1]);
+      const time_to_be_intro = t > 0 ? 60 - t : t;
+      setOne_min_time(time_to_be_intro);
+      setBetNumber(time_to_be_intro);
+      fk.setFieldValue("show_this_one_min_time", time_to_be_intro);
+      if (time_to_be_intro === 5 || time_to_be_intro === 4 || time_to_be_intro === 3 || time_to_be_intro === 2) {
       }
 
-      if (onemin <= 10) {
+      if (time_to_be_intro <= 10) {
         fk.setFieldValue("openTimerDialogBoxOneMin", true);
-        Number(onemin) <= 5 && Number(onemin) > 0 && handlePlaySound();
-        Number(onemin) === 0 && handlePlaySoundLast();
+        Number(time_to_be_intro) <= 5 && Number(time_to_be_intro) > 0 && handlePlaySound();
+        Number(time_to_be_intro) === 0 && handlePlaySoundLast();
       } else {
         fk.setFieldValue("openTimerDialogBoxOneMin", false);
       }
-      if (onemin === 0) {
+      if (time_to_be_intro === 0) {
         client.refetchQueries("myAllhistory_1");
         client.refetchQueries("walletamount");
         client.refetchQueries("gamehistory_wingo_1");
