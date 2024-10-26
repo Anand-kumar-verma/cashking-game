@@ -78,7 +78,7 @@ const SpentBetLeft = ({ milliseconds, seconds, fk, formik }) => {
         );
         console.log(response);
         if (response?.data?.msg === "Data save successfully") {
-          localStorage.setItem("spent_amount1", reqbody?.amount);
+          localStorage.setItem("spent_amount1", spnt_amount_fk.values.spend_amount);
           setTimeout(() => {
             client.refetchQueries("walletamount_aviator");
           }, 1000);

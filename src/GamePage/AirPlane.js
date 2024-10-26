@@ -26,6 +26,7 @@ import SpentBetLeft from "./SpentBetLeft";
 import SpentBetRight from "./SpentBetRight";
 import betmusic from "../assets/place_your_bet.mp3";
 import { useSocket } from "../Shared/SocketContext";
+import AllBets from "./AllBets";
 
 const AirPlane = ({ formik, fk }) => {
   const socket = useSocket();
@@ -50,10 +51,10 @@ const AirPlane = ({ formik, fk }) => {
   let bool = true;
   const audioRefMusic = useRef(null);
 
-  useEffect(()=>{
+  useEffect(() => {
     startFly(900)
     // fk.setFieldValue("closeButtomDot", true);
-  },[])
+  }, [])
 
   useEffect(() => {
     const handleNewMessage = (newMessage) => {
@@ -147,9 +148,9 @@ const AirPlane = ({ formik, fk }) => {
       fk.setFieldValue("waitingForNextTime2", false);
       formik.setFieldValue("refetch", Number(formik.values.refetch) + 1);
       fk.setFieldValue("isShadowPath", false);
-      setTimeout(()=>{
+      setTimeout(() => {
         fk.setFieldValue("isShadowPath", false);
-      },1000)
+      }, 1000)
     }
   }, [crash]);
 
@@ -220,9 +221,8 @@ const AirPlane = ({ formik, fk }) => {
   return (
     <>
       <div
-        className={`${
-          !waiting_aviator && "lg:py-8 py-9"
-        } moved parentdiv relative lg:h-[60vh]  h-[35vh] w-[99.8%] overflow-hidden  rounded-3xl mt-1 border-[1px] border-white border-opacity-10`}
+        className={`${!waiting_aviator && "lg:py-8 py-9"
+          } moved parentdiv relative lg:h-[60vh]  h-[35vh] w-[99.8%] overflow-hidden  rounded-3xl mt-1 border-[1px] border-white border-opacity-10`}
       >
         <audio ref={audioRefMusic} hidden>
           <source src={betmusic} type="audio/mp3" />
@@ -233,12 +233,11 @@ const AirPlane = ({ formik, fk }) => {
             return (
               <img
                 src={backgroundImage_url}
-                className={`${
-                  backgroundImage_url ===
-                  "https://res.cloudinary.com/do7kimovl/image/upload/v1709114502/circle_dafpdo.svg"
+                className={`${backgroundImage_url ===
+                    "https://res.cloudinary.com/do7kimovl/image/upload/v1709114502/circle_dafpdo.svg"
                     ? "absolute  -bottom-[400%] left-0 rotate_background_image !z-0 bg-gradient-to-l from-[#000000] via-[#5a125a] to-[#0a070e] bg-opacity-5 w-[900%] h-[900%]"
                     : "bgimagedynamic !z-0 absolute  top-0 left-0 h-full w-[99.8%]"
-                }  object-cover `}
+                  }  object-cover `}
               />
             );
           })}
@@ -253,42 +252,32 @@ const AirPlane = ({ formik, fk }) => {
                 className="z-10 absolute"
               >
                 <path
-                  d={`M -10 ${
-                    initialCordinate.y + 24 + move_to_buttom_desktop
-                  } C ${
-                    bottomLeftCoordinate.x < 300
+                  d={`M -10 ${initialCordinate.y + 24 + move_to_buttom_desktop
+                    } C ${bottomLeftCoordinate.x < 300
                       ? bottomLeftCoordinate.x - 40
                       : 300
-                  } ${initialCordinate.y + 20 + move_to_buttom_desktop}, ${
-                    bottomLeftCoordinate.x < 500
+                    } ${initialCordinate.y + 20 + move_to_buttom_desktop}, ${bottomLeftCoordinate.x < 500
                       ? bottomLeftCoordinate.x - 20
                       : 500
-                  } ${initialCordinate.y + 20 + move_to_buttom_desktop}, ${
-                    bottomLeftCoordinate.x + 17
-                  } ${bottomLeftCoordinate.y + 22 + move_to_buttom_desktop} L ${
-                    bottomLeftCoordinate.x + 10
-                  } ${initialCordinate.y + 30 + move_to_buttom_desktop} L 10 ${
-                    initialCordinate.y + 30 + move_to_buttom_desktop
-                  } Z`}
+                    } ${initialCordinate.y + 20 + move_to_buttom_desktop}, ${bottomLeftCoordinate.x + 17
+                    } ${bottomLeftCoordinate.y + 22 + move_to_buttom_desktop} L ${bottomLeftCoordinate.x + 10
+                    } ${initialCordinate.y + 30 + move_to_buttom_desktop} L 10 ${initialCordinate.y + 30 + move_to_buttom_desktop
+                    } Z`}
                   fill="rgba(112,9,25, 0.6)"
                   stroke-width="3"
                   stroke-dasharray="1000 0"
                   stroke-linejoin="round"
                 />
                 <path
-                  d={`M -10 ${
-                    initialCordinate.y + 25 + move_to_buttom_desktop
-                  } C ${
-                    bottomLeftCoordinate.x < 300
+                  d={`M -10 ${initialCordinate.y + 25 + move_to_buttom_desktop
+                    } C ${bottomLeftCoordinate.x < 300
                       ? bottomLeftCoordinate.x - 40
                       : 300
-                  } ${initialCordinate.y + 23 + move_to_buttom_desktop}, ${
-                    bottomLeftCoordinate.x < 500
+                    } ${initialCordinate.y + 23 + move_to_buttom_desktop}, ${bottomLeftCoordinate.x < 500
                       ? bottomLeftCoordinate.x - 20
                       : 500
-                  } ${initialCordinate.y + 23 + move_to_buttom_desktop}, ${
-                    bottomLeftCoordinate.x + 17
-                  } ${bottomLeftCoordinate.y + 21 + move_to_buttom_desktop}`}
+                    } ${initialCordinate.y + 23 + move_to_buttom_desktop}, ${bottomLeftCoordinate.x + 17
+                    } ${bottomLeftCoordinate.y + 21 + move_to_buttom_desktop}`}
                   stroke="#a10019"
                   stroke-width="4"
                   fill="none"
@@ -303,21 +292,16 @@ const AirPlane = ({ formik, fk }) => {
               >
                 <path
                   className="!absolute !bottom-0 !left-0"
-                  d={`M -10 ${initialCordinate.y + move_to_buttom_mobile} C ${
-                    bottomLeftCoordinate.x < 80
+                  d={`M -10 ${initialCordinate.y + move_to_buttom_mobile} C ${bottomLeftCoordinate.x < 80
                       ? bottomLeftCoordinate.x - 10
                       : 80
-                  } ${initialCordinate.y + move_to_buttom_mobile}, ${
-                    bottomLeftCoordinate.x < 120
+                    } ${initialCordinate.y + move_to_buttom_mobile}, ${bottomLeftCoordinate.x < 120
                       ? bottomLeftCoordinate.x - 5
                       : 120
-                  } ${initialCordinate.y + move_to_buttom_mobile},${
-                    bottomLeftCoordinate.x + 12
-                  } ${bottomLeftCoordinate.y - 1 + move_to_buttom_mobile} L ${
-                    bottomLeftCoordinate.x + 15
-                  } ${initialCordinate.y + 3 + move_to_buttom_mobile} L ${
-                    bottomLeftCoordinate.y + move_to_buttom_mobile
-                  } ${initialCordinate.y + 3 + move_to_buttom_mobile} Z`}
+                    } ${initialCordinate.y + move_to_buttom_mobile},${bottomLeftCoordinate.x + 12
+                    } ${bottomLeftCoordinate.y - 1 + move_to_buttom_mobile} L ${bottomLeftCoordinate.x + 15
+                    } ${initialCordinate.y + 3 + move_to_buttom_mobile} L ${bottomLeftCoordinate.y + move_to_buttom_mobile
+                    } ${initialCordinate.y + 3 + move_to_buttom_mobile} Z`}
                   fill="rgba(112,9,25, 0.6)"
                   stroke-width="3"
                   stroke-dasharray="1000 0"
@@ -325,17 +309,14 @@ const AirPlane = ({ formik, fk }) => {
                 />
                 <path
                   className="!absolute !bottom-0 !left-0"
-                  d={`M -10 ${initialCordinate.y + move_to_buttom_mobile} C ${
-                    bottomLeftCoordinate.x < 80
+                  d={`M -10 ${initialCordinate.y + move_to_buttom_mobile} C ${bottomLeftCoordinate.x < 80
                       ? bottomLeftCoordinate.x - 10
                       : 80
-                  } ${initialCordinate.y + move_to_buttom_mobile}, ${
-                    bottomLeftCoordinate.x < 120
+                    } ${initialCordinate.y + move_to_buttom_mobile}, ${bottomLeftCoordinate.x < 120
                       ? bottomLeftCoordinate.x - 5
                       : 120
-                  } ${initialCordinate.y + move_to_buttom_mobile},${
-                    bottomLeftCoordinate.x + 12
-                  } ${bottomLeftCoordinate.y - 1 + move_to_buttom_mobile} `}
+                    } ${initialCordinate.y + move_to_buttom_mobile},${bottomLeftCoordinate.x + 12
+                    } ${bottomLeftCoordinate.y - 1 + move_to_buttom_mobile} `}
                   stroke="#a10019"
                   stroke-width="3"
                   fill="none"
@@ -367,7 +348,7 @@ const AirPlane = ({ formik, fk }) => {
           {/* fk.values.isFlying */}
           {useMemo(() => {
             return (
-             true && (
+              true && (
                 <>
                   {/* !fk.values.closeButtomDot */}
                   {true ? (
@@ -422,7 +403,7 @@ const AirPlane = ({ formik, fk }) => {
             <p
               className={`
         absolute text-6xl lg:text-7xl   left-[30%] top-[35%] lg:left-[42%] lg:top-[38%]   text-white
-        ${fk.values.setcolorofdigit  && "!text-[#BC0319]"}
+        ${fk.values.setcolorofdigit && "!text-[#BC0319]"}
         flex flex-col
         `}
             >
@@ -454,12 +435,18 @@ const AirPlane = ({ formik, fk }) => {
                 </div>
               )} 
                */}
-               <div className="!font-semibold grid grid-cols-3 lg:w-[225px] w-[190px]">
+              {/* <div className="!font-semibold grid grid-cols-3 lg:w-[225px] w-[190px]">
                   <span className="col-span-2">{`${seconds}.${String(
                     milliseconds
                   ).padStart(2, "0")}`}</span>
                   <span style={{ marginLeft: "8px" }}>x</span>
-                </div>
+                </div> */}
+
+              <div className="!font-semibold flex items-center lg:w-[225px] w-[190px]">
+                <span className="flex-1 text-right">{`${seconds}.${String(milliseconds).padStart(2, "0")}`}</span>
+                <span style={{ marginLeft: "8px" }}>x</span>
+              </div>
+
             </p>
           )}
         </>
