@@ -42,7 +42,7 @@ function DepositeHistory() {
     <Layout>
       <Container
         sx={{
-          background: 'white',
+          background: '#F7F8FF',
           width: "100%",
           height: "100vh",
           overflow: "auto",
@@ -55,7 +55,7 @@ function DepositeHistory() {
         <Box>
           <Box
             sx={{
-              padding: "10px", background: 'white',
+              padding: "10px", background: '#F7F8FF',
               mb: 5,
               pt: 9,
             }}
@@ -77,7 +77,7 @@ function DepositeHistory() {
                     mb: 2,
                     padding: "15px",
                     borderRadius: "10px",
-                    background: '#e5e5e573',
+                    background: '#ffffff',
                   }}
                 >
                   <Stack

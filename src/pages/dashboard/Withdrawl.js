@@ -699,7 +699,7 @@ const style = {
     mt: "20px",
     padding: "10px",
     "&:hover": {
-      background: theme.palette.secondary.light,
+      background: zubgtext,
       border: "1px solid transparent",
     },
   },

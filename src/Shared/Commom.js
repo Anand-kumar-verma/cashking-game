@@ -44,9 +44,10 @@ export const normalinput = {
     fontWeight: '500',
   },
   '&>div>input': {
-    padding: '10px !important',
+    padding: '12px !important',
     borderRadius: '10px',
     border: ' 1px solid #F7F8FF',
+    background: '#FFFFFF',
   },
   '& input::placeholder': {
     color: '#757575',
@@ -74,7 +75,7 @@ export const selectinput = {
     border: 'none',
     borderRadius: '10px',
     color: 'black',
-    padding: '10px 0px 10px 5px !important',
+    padding: '12px 0px 12px 5px !important',
     border: 'none !important',
   },
   '&>div>fieldset': {
@@ -89,8 +90,8 @@ export const selectinput = {
 
 export const passwordinput = {
   borderRadius: '10px',
-
-  '&>input': { padding: '10px', color: 'black', },
+  background: '#FFFFFF',
+  '&>input': { padding: '12px', color: 'black', background: '#FFFFFF', borderRadius: '10px', },
   '&>div>button': { padding: '0px', },
   '&>:hover': {
     borderRadius: '10px 0px 0px 10px'

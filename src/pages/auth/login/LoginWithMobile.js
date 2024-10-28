@@ -179,6 +179,7 @@ function LoginWithMobile() {
           <Box sx={{ ...flexbetween, }}>
             <Select
               sx={{
+                background: '#FFFFFF',
                 '&>fieldset': {
                   border: 'none',
                   outline: 'none',

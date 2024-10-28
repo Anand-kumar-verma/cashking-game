@@ -93,7 +93,7 @@ function AddBankDetails() {
       <Container
         className="no-scrollbar"
         sx={{
-          background: theme.palette.secondary.main,
+          background: '#F7F8FF',
           width: "100%",
           height: "100vh",
           overflow: "auto",
