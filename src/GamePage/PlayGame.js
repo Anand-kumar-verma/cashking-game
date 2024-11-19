@@ -10,7 +10,7 @@ import { useMediaQuery } from "react-responsive";
 import aviatorimage from "../assets/aviatorimage.png";
 import crashmusic from "../assets/crashmusic.mp3";
 import plane1 from "../assets/front-aviator-image.svg";
-import howtoplay from "../assets/howtoplay.PNG";
+import howtoplay from "../assets/how.png";
 import { just_start_after_waitingFun } from "../redux/slices/counterSlice";
 import AirPlane from "./AirPlane";
 import AllBets from "./AllBets";

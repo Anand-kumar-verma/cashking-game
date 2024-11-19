@@ -3,6 +3,7 @@ import { dummy_aviator, endpoint } from "../urls";
 import toast from "react-hot-toast";
 import { aviator_login_data_fn } from "../../redux/slices/counterSlice";
 import CryptoJS from "crypto-js";
+import { enCryptData } from "../../Shared/secret";
 const value =
   (localStorage.getItem("logindataen") &&
     CryptoJS.AES.decrypt(
@@ -22,6 +23,19 @@ export const GetTopFn = async () => {
     console.log(e);
   }
 };
+export const MyGamesFn = async () => {
+  const reqbody = {
+    user_id: user_id
+}
+try {
+    const res = await axios.post(endpoint.jili_games, {
+        payload: enCryptData(reqbody),
+    },);
+    return res;
+} catch (e) {
+    console.log(e);
+}
+};
 
 export const MyProfileDataFn = async () => {
   try {
@@ -32,6 +46,7 @@ export const MyProfileDataFn = async () => {
     console.log(e);
   }
 };
+
 export const Cricket_id_passFunction = async ({ setId_pass_data }) => {
   try {
     const response = await axios.get(

@@ -12,7 +12,7 @@ import vendorlogo16 from '../../../assets/images/vendorlogo16.png';
 import { bggrad } from "../../../Shared/color";
 
 
-function PVC() {
+function PVC({alljiligames ,getGamnesbyID}) {
 
     const style = {
         winbox: { background: bggrad, borderRadius: '20px', height: '150px', marginBottom: '20px', },
@@ -31,20 +31,17 @@ function PVC() {
                     PVC                </Typography>
             </Stack>
             <Grid container spacing={2}>
-                <Grid item xs={6}>
-                    <NavLink to='/comingsoon'>
-                        <Box sx={style.winbox}>
-                            <Box component='img' src={vendorlogo15} sx={{ width: '100%', height: '100%' }}></Box>
-                        </Box>
-                    </NavLink>
-                </Grid>
-                <Grid item xs={6}>
-                    <NavLink to='/comingsoon'>
-                        <Box sx={style.winbox}>
-                            <Box component='img' src={vendorlogo16} sx={{ width: '100%', height: '100%' }}></Box>
-                        </Box>
-                    </NavLink>
-                </Grid>
+                {alljiligames?.map((item) => {
+                    return <>
+                        <Grid item xs={4}>
+                            <Box sx={style.winbox}
+                                onClick={() => getGamnesbyID(item?.id)}>
+                                <Box component='img' src={item?.img} sx={{ width: '100%', height: '100%', borderRadius: '20px', }}></Box>
+                            </Box>
+                        </Grid>
+                    </>
+                })}
+
             </Grid>
 
         </Box>

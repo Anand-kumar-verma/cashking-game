@@ -5,7 +5,7 @@ export const fron_end_main_domain = "https://cashkinggame.bet";
 
 export const newdomain1 = "https://api.cashkinggame.bet";
 export const newdomain = "https://api.cashkinggame.bet";
-// export const newdomain1 = "http://192.168.18.183:9009";
+export const local = "http://192.168.18.183:9009";
 // export const newdomain = "http://192.168.18.183:9009";
 
 
@@ -44,8 +44,8 @@ export const endpoint = {
   change_password: `${newdomain1}/api/v1/forget-password-change-pass`,
   forget_password: `${newdomain1}/api/v1/change-password`,
   Qr_address: `${newdomain1}/api/v1/admin-qr-address`,
-  
-
+  jili_games: `${local}/api/v1/get-all-jilli-games`,
+  jili_games_id: `${local}/api/v1/get-all-games_urls-by_id`,
 
   userwallet: `${newdomain1}/api/v1/userwallet`,
   get_yesterday_deposit_withdrawl_by_treamFn: `${newdomain1}/api/v1/get_yesterday_deposit_withdrawl_by_treamFn`,
@@ -122,19 +122,19 @@ export const endpoint = {
   get_level_general: `${newdomain1}/api/v1/get_level_general_data`,
   get_claim_card: `${newdomain1}/api/v1/claim-gift-card`,
   get_gift: `${newdomain1}/api/v1/get-gift-card-list`,
-  incom_gift : `${newdomain1}/api/v1/gift-bonus-list`,
-  level_income : `${newdomain1}/api/v1/level-income`,
+  incom_gift: `${newdomain1}/api/v1/gift-bonus-list`,
+  level_income: `${newdomain1}/api/v1/level-income`,
 
-  registration_send_otp : `${newdomain}/api/v1/registration-send-otp`,
-  registration_verify_otp : `${newdomain}/api/v1/registration-veryfy-otp`,
+  registration_send_otp: `${newdomain}/api/v1/registration-send-otp`,
+  registration_verify_otp: `${newdomain}/api/v1/registration-veryfy-otp`,
 
-  node_api:{
-    get_leder_data:`${dummy_aviator}/api/v1/get-ledger-data`,
+  node_api: {
+    get_leder_data: `${dummy_aviator}/api/v1/get-ledger-data`,
     my_history: `${dummy_aviator}/api/v1/my-history-by-user-id`,
-    login_with_node:`${dummy_aviator}/api/v1/createuser`,
-    main_wallet:`${dummy_aviator}/main-wallet-to-aviator`,
-    aviator_main:`${dummy_aviator}/aviator-to-main-wallet`,
+    login_with_node: `${dummy_aviator}/api/v1/createuser`,
+    main_wallet: `${dummy_aviator}/main-wallet-to-aviator`,
+    aviator_main: `${dummy_aviator}/aviator-to-main-wallet`,
     get_top_users: `${dummy_aviator}/api/v1/get-top-users`,
   }
- 
+
 };

@@ -1,20 +1,15 @@
-import StartIcon from "@mui/icons-material/ArrowRightAlt";
-import CampaignOutlinedIcon from "@mui/icons-material/CampaignOutlined";
-import CasinoIcon from "@mui/icons-material/Casino";
-import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
-import MilitaryTechIcon from "@mui/icons-material/MilitaryTech";
-import TelegramIcon from "@mui/icons-material/Telegram";
+import VolumeUpIcon from "@mui/icons-material/VolumeUpOutlined";
+import WhatshotIcon from "@mui/icons-material/Whatshot";
 import {
   Box,
-  Button,
   CircularProgress,
   Container,
   Stack,
-  TextField,
-  Typography,
+  Typography
 } from "@mui/material";
 import axios from "axios";
-import copy from "clipboard-copy";
+import CryptoJS from "crypto-js";
+
 import { useFormik } from "formik";
 import React, { useEffect, useRef, useState } from "react";
 import toast from "react-hot-toast";
@@ -25,7 +20,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { flexbetween, flexcoloumcenter } from "../../Shared/Commom";
+import { flexbetween } from "../../Shared/Commom";
 import { checkTokenValidity } from "../../Shared/CookieStorage";
 import CustomCircularProgress from "../../Shared/CustomCircularProgress";
 import MyModal from "../../Shared/Modal";
@@ -41,12 +36,17 @@ import {
 import crown1 from "../../assets/crown1.png";
 import crown2 from "../../assets/crown2.png";
 import crown3 from "../../assets/crown3.png";
-import fivedlooter from "../../assets/images/5dlottery.png";
-import aviater from "../../assets/images/avioter.png";
-import k3lottery from "../../assets/images/k3lottery.png";
+import download from "../../assets/downloadbutton.png";
+import game1 from "../../assets/images/game1.png";
+import game2 from "../../assets/images/game2.png";
+import game3 from "../../assets/images/game3.png";
+import game4 from "../../assets/images/game4.png";
+import game5 from "../../assets/images/game5.png";
+import game6 from "../../assets/images/game6.png";
+import game7 from "../../assets/images/game7.png";
+import game8 from "../../assets/images/game8.png";
 import stage from "../../assets/images/podium.png";
-import trx from "../../assets/images/trx.png";
-import wingo from "../../assets/images/wingo.png";
+import customer from "../../assets/images/pro_notification.png";
 import slider1 from "../../assets/img/banner1.png";
 import slider2 from "../../assets/img/banner2.jpg";
 import slider3 from "../../assets/img/banner3.jpg";
@@ -54,8 +54,6 @@ import slider4 from "../../assets/img/banner4.png";
 import slider5 from "../../assets/img/banner5.jpg";
 import slider6 from "../../assets/img/banner6.png";
 import slider7 from "../../assets/img/banner7.png";
-import customer from "../../assets/images/pro_notification.png";
-import download from "../../assets/downloadbutton.png";
 import logo from "../../assets/img/logo.png";
 import place1 from "../../assets/place1.png";
 import place2 from "../../assets/place2.png";
@@ -70,29 +68,19 @@ import {
   please_reconnect_the_serverFun,
   waitingAviatorFun,
 } from "../../redux/slices/counterSlice";
-import { walletamount, yesterdayFn } from "../../services/apicalling";
+import { MyGamesFn, walletamount, yesterdayFn } from "../../services/apicalling";
 import {
   apk_url,
   endpoint,
-  fron_end_main_domain,
-  support_mail,
-  telegram_url,
+  fron_end_main_domain
 } from "../../services/urls";
 import theme from "../../utils/theme";
-import VolumeUpIcon from "@mui/icons-material/VolumeUpOutlined";
-import WhatshotIcon from "@mui/icons-material/Whatshot";
-import game1 from "../../assets/images/game1.png";
-import game2 from "../../assets/images/game2.png";
-import game3 from "../../assets/images/game3.png";
-import game4 from "../../assets/images/game4.png";
-import game5 from "../../assets/images/game5.png";
-import game6 from "../../assets/images/game6.png";
-import game7 from "../../assets/images/game7.png";
-import game8 from "../../assets/images/game8.png";
 import Casino from "./component/Casino";
 import Fishing from "./component/Fishing";
 import Lottery from "./component/Lottery";
-import MiniGames from "./component/MiniGames";
+// import MiniGames from "./component/MiniGames";
+import { enCryptData } from "../../Shared/secret";
+import JiliGames from "./component/JiliGames";
 import PVC from "./component/PVC";
 import Populer from "./component/Populer";
 import Slots from "./component/Slots";
@@ -142,11 +130,6 @@ function Dashboard() {
       window.location.href = "/"; // Redirect to login page
     }
   }, []);
-
-  const functionTOCopy = (value) => {
-    copy(value);
-    toast.success("Copied to clipboard!");
-  };
 
   const top11WinnerFunction = async () => {
     // setloding(true);
@@ -219,6 +202,40 @@ function Dashboard() {
   useEffect(() => {
     getStatus();
   }, []);
+  const valuedata =
+  (localStorage.getItem("logindataen") &&
+      CryptoJS.AES.decrypt(
+          localStorage.getItem("logindataen"),
+          "anand"
+      )?.toString(CryptoJS.enc.Utf8)) ||
+  null;
+const user_id = valuedata && JSON.parse(valuedata)?.UserID;
+
+  const { data:game } = useQuery(["game_detail"], () => MyGamesFn(), {
+    refetchOnMount: false,
+    refetchOnReconnect: false,
+    refetchOnWindowFocus: false,
+  });
+
+  const alljiligames = game?.data
+
+
+const getGamnesbyID = async (gameId) => {
+
+    const reqbody = {
+        user_id: user_id,
+        game_id: gameId
+    }
+    try {
+    
+        const res = await axios.post(endpoint.jili_games_id, {
+            payload: enCryptData(reqbody),
+        },);
+        // window.location.href= res?.data?.data?.Data
+    } catch (e) {
+        console.log(e);
+    }
+};
 
   return (
     <Layout header={false}>
@@ -331,135 +348,6 @@ function Dashboard() {
           sx={{ background: bgdarkgray }}
         >
 
-          {/* <Box
-            sx={{
-              width: "95%",
-              marginLeft: "2.5%",
-              background: bggrad,
-              boxShadow: zubgshadow,
-              borderRadius: "10px",
-              mt: "20px",
-              padding: "10px 10px",
-            }}
-          >
-            <Stack
-              direction="row"
-              sx={{
-                alignItems: "center",
-                justifyContent: "center",
-                flexDirection: "column",
-                background: bgdarkgray,
-                borderRadius: "5px",
-                mb: 1,
-                py: 1,
-              }}
-            >
-              <Typography
-                variant="body1"
-                sx={{
-                  color: bggold,
-                  fontWeight: 600,
-                  fontSize: "20px",
-                }}
-              >
-
-                ₹{" "}
-                {(Number(wallet?.wallet) + Number(wallet?.winning))?.toFixed(2)}
-              </Typography>
-              <Typography
-                variant="body1"
-                sx={{
-                  color: bggold,
-                  fontWeight: 500,
-                  fontSize: "15px",
-                }}
-              >
-                Available balance
-              </Typography>
-            </Stack>
-            <Box
-              sx={{
-                width: "100%",
-                display: "flex",
-                alignItems: "start",
-                justifyContent: "space-between",
-              }}
-            >
-              <CampaignOutlinedIcon sx={{ color: "black" }} />
-
-              <Box
-                sx={{
-                  width: "90%",
-                  "&>p": { fontSize: "13px" },
-                }}
-              >
-                <Typography
-                  variant="body1"
-                  className="funp13"
-                  sx={{ color: bgdarkgray }}
-                >
-                  See the Installation page for additional docs about how to
-                  make sure everything is set up correctly.
-                </Typography>
-              </Box>
-            </Box>
-          </Box> */}
-          {/* <Box sx={styles.referralLinkContainer}>
-            <Typography variant="body1" sx={styles.referralLinkTitle}>
-              Referral Link
-            </Typography>
-            <Stack direction="row" sx={styles.referralLinkInputContainer}>
-              <TextField
-                className="dbinput"
-                fullWidth
-                id="referrel_code"
-                name="referrel_code"
-                value={fk.values.referrel_code}
-                // onChange={fk.handleChange}
-                sx={styles.referralLinkInput}
-              />
-              <Button
-                variant="contained"
-                sx={styles.referralLinkButton}
-                onClick={() => functionTOCopy(fk.values.referrel_code)}
-              >
-                Copy
-              </Button>
-            </Stack>
-            <Stack direction="row" sx={styles.socialButtonsContainer}>
-              <Button
-                className="telegrambtn"
-                sx={styles.telegramButton}
-                onClick={() => window.open(`${telegram_url}`, "_blank")}
-              >
-                <Stack>
-                  <Box sx={styles.socialButtonIcon}>
-                    <TelegramIcon sx={styles.socialIcon} />
-                  </Box>
-                  <Box
-                    className="funp13"
-                    sx={{
-                      ...styles.socialButtonText,
-                      color: "black !important",
-                    }}
-                  >
-                    Telegram
-                  </Box>
-                </Stack>
-              </Button>
-
-              <Button className="supportbtn" sx={styles.supportButton}>
-                <a href={`mailto:${support_mail}`}>
-                  <Stack>
-                    <HelpOutlineIcon sx={styles.socialIconinfo} />
-                    <Box sx={styles.socialButtonText} className="funp13">
-                      Support
-                    </Box>
-                  </Stack>
-                </a>
-              </Button>
-            </Stack>
-          </Box> */}
           <Stack
             direction="row"
             sx={{
@@ -530,7 +418,7 @@ function Dashboard() {
                 <Box component="img" src={game4}></Box>
               </Box>
               <Typography variant="body1" color="initial" sx={styles.gamecattext}>
-                Casino
+                Table & Card
               </Typography>
             </NavLink>
           </Stack>
@@ -555,7 +443,7 @@ function Dashboard() {
                 <Box component="img" src={game8}></Box>
               </Box>
               <Typography variant="body1" color="initial" sx={styles.gamecattext}>
-                PVC
+                Slot
               </Typography>
             </NavLink>
             <NavLink onClick={() => handleChange(6)}>
@@ -587,7 +475,8 @@ function Dashboard() {
                 <Box component="img" src={game6}></Box>
               </Box>
               <Typography variant="body1" color="initial" sx={styles.gamecattext}>
-                Mini games
+                Jili games
+                {/* Mini games */}
               </Typography>
             </NavLink>
             <NavLink onClick={() => handleChange(8)}>
@@ -608,12 +497,13 @@ function Dashboard() {
             </NavLink>
           </Stack>
           {value === 1 && <Lottery />}
-          {value === 2 && <Slots />}
+          {value === 2 && <Slots alljiligames={alljiligames?.crash} getGamnesbyID={getGamnesbyID} />}
           {value === 3 && <Sports />}
-          {value === 4 && <Casino />}
-          {value === 5 && <PVC />}
-          {value === 6 && <Fishing />}
-          {value === 7 && <MiniGames />}
+          {value === 4 && <Casino  alljiligames={alljiligames?.tableandcard} getGamnesbyID={getGamnesbyID}/>}
+          {value === 5 && <PVC alljiligames={alljiligames?.slot} getGamnesbyID={getGamnesbyID}/>}
+          {value === 6 && <Fishing alljiligames={alljiligames?.fish} getGamnesbyID={getGamnesbyID}/>}
+          {/* {value === 7 && <MiniGames />} */}
+          {value === 7 && <JiliGames alljiligames={alljiligames?.data}  getGamnesbyID={getGamnesbyID}/>}
           {value === 8 && <Populer />}
 
           {loding ? (
