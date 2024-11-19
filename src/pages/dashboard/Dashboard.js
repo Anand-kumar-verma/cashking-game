@@ -386,7 +386,7 @@ const getGamnesbyID = async (gameId) => {
                   borderRadius: value === 2 && "10px !important",
                 }}
               >
-                <Box className="h-20  rounded-full" component="img" src={"https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/en_US/games/switch/l/lots-of-slots-switch/hero"}></Box>
+                <Box className="h-20  rounded-full" component="img" src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7dLZTf9ByZB8t0KLSUiiqzEOodKnLVou99bOihiVk3diR8cR2tAV6kQM3Ow_2vwmGiZg&usqp=CAU"}></Box>
               </Box>
               <Typography variant="body1" color="initial" sx={styles.gamecattext}>
                 Slots

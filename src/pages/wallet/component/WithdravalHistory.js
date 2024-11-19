@@ -10,23 +10,18 @@ import {
 import moment from "moment";
 import * as React from "react";
 import { useQuery } from "react-query";
-import { useNavigate } from "react-router-dom";
 import CustomCircularProgress from "../../../Shared/CustomCircularProgress";
 import {
-  bgdarkgray,
-  bggrad,
   zubgback,
   zubgbackgrad,
   zubgmid,
-  zubgtext,
+  zubgtext
 } from "../../../Shared/color";
 import deposit from "../../../assets/rechargeHistory.png";
 import Layout from "../../../component/Layout/Layout";
 import { withdrawlHistoryFunction } from "../../../services/apicalling";
-import theme from "../../../utils/theme";
 
 function WithdravalHistory() {
-  const navigate = useNavigate();
   const { isLoading, data } = useQuery(
     ["deposit_history"],
     () => withdrawlHistoryFunction(),

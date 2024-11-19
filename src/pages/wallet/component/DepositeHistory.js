@@ -11,21 +11,15 @@ import {
 import moment from "moment";
 import * as React from "react";
 import { useQuery } from "react-query";
-import { useNavigate } from "react-router-dom";
 import CustomCircularProgress from "../../../Shared/CustomCircularProgress";
-import { bgdarkgray, bggrad, zubgback, zubgbackgrad, zubgmid, zubgtext } from "../../../Shared/color";
-import deposit from "../../../assets/wallet-money-svgrepo-com.svg";
+import { zubgback, zubgbackgrad, zubgmid, zubgtext } from "../../../Shared/color";
 import Layout from "../../../component/Layout/Layout";
 import {
   depositHistoryFunction
 } from "../../../services/apicalling";
-import theme from "../../../utils/theme";
 
 function DepositeHistory() {
-  const navigate = useNavigate();
-  const goBack = () => {
-    navigate(-1);
-  };
+
   const { isLoading, data } = useQuery(
     ["deposit_history"],
     () => depositHistoryFunction(),

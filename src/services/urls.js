@@ -5,7 +5,7 @@ export const fron_end_main_domain = "https://cashkinggame.bet";
 
 export const newdomain1 = "https://api.cashkinggame.bet";
 export const newdomain = "https://api.cashkinggame.bet";
-export const local = "http://192.168.18.183:9009";
+// export const local = "http://192.168.18.183:9009";
 // export const newdomain = "http://192.168.18.183:9009";
 
 
@@ -44,8 +44,8 @@ export const endpoint = {
   change_password: `${newdomain1}/api/v1/forget-password-change-pass`,
   forget_password: `${newdomain1}/api/v1/change-password`,
   Qr_address: `${newdomain1}/api/v1/admin-qr-address`,
-  jili_games: `${local}/api/v1/get-all-jilli-games`,
-  jili_games_id: `${local}/api/v1/get-all-games_urls-by_id`,
+  jili_games: `${newdomain}/api/v1/get-all-jilli-games`,
+  jili_games_id: `${newdomain}/api/v1/get-all-games_urls-by_id`,
 
   userwallet: `${newdomain1}/api/v1/userwallet`,
   get_yesterday_deposit_withdrawl_by_treamFn: `${newdomain1}/api/v1/get_yesterday_deposit_withdrawl_by_treamFn`,
