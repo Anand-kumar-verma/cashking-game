@@ -1,18 +1,9 @@
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import React from 'react';
-import { NavLink } from "react-router-dom";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Slot from '../../../assets/images/slot.png';
-import win from '../../../assets/images/win.png';
-import vendorlogo1 from '../../../assets/images/vendorlogo1.png';
-import vendorlogo2 from '../../../assets/images/vendorlogo2.png';
-import vendorlogo3 from '../../../assets/images/vendorlogo3.png';
-import vendorlogo4 from '../../../assets/images/vendorlogo4.png';
-import vendorlogo5 from '../../../assets/images/vendorlogo5.png';
-import vendorlogo6 from '../../../assets/images/vendorlogo6.png';
-import vendorlogo7 from '../../../assets/images/vendorlogo7.png';
 import { bggrad } from "../../../Shared/color";
 
 

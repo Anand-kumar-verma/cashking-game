@@ -1,14 +1,10 @@
 
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import React from 'react';
-import { NavLink } from "react-router-dom";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import sportimg from '../../../assets/images/video.png';
-import vendorlogo12 from '../../../assets/images/vendorlogo12.png';
-import vendorlogo13 from '../../../assets/images/vendorlogo13.png';
-import vendorlogo14 from '../../../assets/images/vendorlogo14.png';
 import { bggrad } from "../../../Shared/color";
 
 

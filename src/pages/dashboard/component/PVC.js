@@ -2,13 +2,10 @@
 
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import React from 'react';
-import { NavLink } from "react-router-dom";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import sportimg from '../../../assets/images/chess.png';
-import vendorlogo15 from '../../../assets/images/vendorlogo15.png';
-import vendorlogo16 from '../../../assets/images/vendorlogo16.png';
 import { bggrad } from "../../../Shared/color";
 
 
