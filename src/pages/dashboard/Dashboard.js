@@ -227,12 +227,15 @@ const getGamnesbyID = async (gameId) => {
         game_id: gameId
     }
     try {
-    
         const res = await axios.post(endpoint.jili_games_id, {
             payload: enCryptData(reqbody),
         },);
-        // window.location.href= res?.data?.data?.Data
-    } catch (e) {
+        if (res?.data?.data?.Data) {
+          window.location.href = res?.data?.data?.Data;
+      } else {
+          toast("Coming Soon")
+    }
+  } catch (e) {
         console.log(e);
     }
 };
@@ -383,7 +386,7 @@ const getGamnesbyID = async (gameId) => {
                   borderRadius: value === 2 && "10px !important",
                 }}
               >
-                <Box component="img" src={game2}></Box>
+                <Box className="h-20  rounded-full" component="img" src={"https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/en_US/games/switch/l/lots-of-slots-switch/hero"}></Box>
               </Box>
               <Typography variant="body1" color="initial" sx={styles.gamecattext}>
                 Slots
