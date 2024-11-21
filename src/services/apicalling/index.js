@@ -3,7 +3,7 @@ import { dummy_aviator, endpoint } from "../urls";
 import toast from "react-hot-toast";
 import { aviator_login_data_fn } from "../../redux/slices/counterSlice";
 import CryptoJS from "crypto-js";
-import { enCryptData } from "../../Shared/secret";
+import { deCryptData, enCryptData } from "../../Shared/secret";
 const value =
   (localStorage.getItem("logindataen") &&
     CryptoJS.AES.decrypt(
@@ -22,19 +22,6 @@ export const GetTopFn = async () => {
     toast(e?.message);
     console.log(e);
   }
-};
-export const MyGamesFn = async () => {
-  const reqbody = {
-    user_id: user_id
-}
-try {
-    const res = await axios.post(endpoint.jili_games, {
-        payload: enCryptData(reqbody),
-    },);
-    return res;
-} catch (e) {
-    console.log(e);
-}
 };
 
 export const MyProfileDataFn = async () => {
@@ -230,6 +217,8 @@ export const walletamount = async () => {
     console.log(e);
   }
 };
+
+
 export const yesterday_deposit_withdrawl_by_treamFn = async () => {
   try {
     const response = await axios.get(
@@ -637,3 +626,61 @@ export const walletamountAviator = async () => {
     console.log(e);
   }
 };
+
+//jilifunctions
+export const MyGamesFn = async () => {
+  const reqbody = {
+    user_id: user_id
+}
+try {
+    const res = await axios.post(endpoint.jili_games, {
+        payload: enCryptData(reqbody),
+    },);
+    return res;
+} catch (e) {
+    console.log(e);
+}
+};
+
+export const JiliwalletFn = async()=>{
+  const reqbody = {
+    user_id : user_id
+  }
+  try{
+    const res = await axios.post(endpoint?.jili_wallet , {
+      payload : enCryptData(reqbody),
+    })
+    return res;
+  }
+  catch (e){
+    console.log(e)
+  }
+}
+export const JiliTransactionHistoryFn = async()=>{
+  const reqbody = {
+    user_id : user_id
+  }
+  try{
+    const res = await axios.post(endpoint?.jili_transaction_history_api , {
+      payload : enCryptData(reqbody),
+    })
+    return res;
+  }
+  catch (e){
+    console.log(e)
+  }
+}
+export const JiliBetHistoryFn = async()=>{
+  const reqbody = {
+    user_id : user_id
+  }
+  try{
+    const res = await axios.post(endpoint?.jili_bet_api , {
+      payload : enCryptData(reqbody),
+    })
+    return res;
+  }
+  catch (e){
+    console.log(e)
+  }
+}

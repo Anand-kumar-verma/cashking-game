@@ -73,6 +73,10 @@ import ActivityDetail from "../pages/activity/component/ActivityDetail.js";
 import DepositeUsdtrecharge from "../pages/wallet/component/DepositUsdtRecharge.js";
 import Win from "../pages/win/win";
 import FirstDepositBonus from "../pages/account/FirstDepositeBonus.js";
+import CreditAccount from "../pages/wallet/CreditAccount.js";
+import DebitAccount from "../pages/wallet/DebitAccount.js";
+import JiliTransactionHistory from "../pages/wallet/component/JiliTransactionHistory.js";
+import JiliBetHistory from "../pages/wallet/component/JiliBetHistory.js";
 
 export const routes = [
   {
@@ -373,5 +377,21 @@ export const routes = [
   {
     path: "/rise/query",
     component: <QueryForm />,
+  },
+  {
+    path: "/credit_Account",
+    component: <CreditAccount />,
+  },
+  {
+    path: "/debit_Account",
+    component: <DebitAccount />,
+  },
+  {
+    path: "/jili_transaction",
+    component: <JiliTransactionHistory />,
+  },
+  {
+    path: "/jili_bet",
+    component: <JiliBetHistory/>,
   },
 ];

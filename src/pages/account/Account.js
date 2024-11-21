@@ -23,6 +23,8 @@ import {
   zubgtext,
 } from "../../Shared/color";
 import bep from "../../assets/images/bep20token_nadcab.png";
+import walet from "../../assets/images/wallet.png";
+import waletact from "../../assets/images/walletactive.png";
 import c1 from "../../assets/service_Center.png";
 import depo from "../../assets/rechargeHistory.png";
 import f1 from "../../assets/service_feedback.png";
@@ -267,6 +269,45 @@ function Account() {
         </Box>
         <Box
           className="grid grid-cols-2 gap-3 "
+          sx={{ mt: "-20px", width: "95%", ml: "" }}
+        >
+          <NavLink to="/credit_Account">
+            <Box
+              className="flex gap-1 p-1 py-4 justify-center items-center   rounded-lg"
+              sx={{ background: 'white' }}
+            >
+              <Typography>
+                <img src={waletact} alt="" className="w-10" />
+              </Typography>
+              <Typography sx={{ color: "black" }}>
+                Credit  <br />
+                <span className="!text-xs !text-gray">
+                  {" "}
+                 To Jili Account
+                </span>
+              </Typography>
+            </Box>
+          </NavLink>
+          <NavLink to="/debit_Account">
+            <Box
+              className="flex gap-1 p-1 py-4 justify-center items-center   rounded-lg"
+              sx={{ background: 'white' }}
+            >
+              <Typography>
+                <img src={walet} alt="" className="w-10" />
+              </Typography>
+              <Typography sx={{ color: "black" }}>
+                Debit <br />
+                <span className="!text-xs !text-gray">
+                  {" "}
+                  From Jili Account
+                </span>
+              </Typography>
+            </Box>
+          </NavLink>
+        </Box>
+        <Box
+          className="grid grid-cols-2 gap-3 "
           sx={{ mt: "-20px", width: "95%", ml: "2.5%" }}
         >
           <NavLink to="/depositHistory">
@@ -312,7 +353,46 @@ function Account() {
               ml: "2.5%",
               borderRadius: "8px ",
             }}
-          >
+          > <Box
+          className="flex justify-between gap-1  p-2"
+          sx={{ borderBottom: "1px solid #dfdfdf" }}
+          component={NavLink}
+          to="/jili_transaction"
+        >
+          <Box className="flex items-center gap-2">
+            <Typography>
+              {" "}
+              <img src={star} alt="" className="w-6" />
+            </Typography>
+            <Typography className="!mt-1 text-black" sx={{ fontSize: '13px' }}>
+              Jili Transaction History
+            </Typography>
+          </Box>
+          <IconButton>
+            {" "}
+            <ArrowForwardIos sx={{ color: bggold }} fontSize="small" />
+          </IconButton>
+        </Box>
+        <Box
+              className="flex justify-between gap-1  p-2"
+              sx={{ borderBottom: "1px solid #dfdfdf" }}
+              component={NavLink}
+              to="/jili_bet"
+            >
+              <Box className="flex items-center gap-2">
+                <Typography>
+                  {" "}
+                  <img src={star} alt="" className="w-6" />
+                </Typography>
+                <Typography className="!mt-1 text-black" sx={{ fontSize: '13px' }}>
+                  Jili Bet History
+                </Typography>
+              </Box>
+              <IconButton>
+                {" "}
+                <ArrowForwardIos sx={{ color: bggold }} fontSize="small" />
+              </IconButton>
+            </Box>
             <Box
               className="flex justify-between gap-1  p-2"
               sx={{ borderBottom: "1px solid #dfdfdf", width: "100%" }}
@@ -353,6 +433,7 @@ function Account() {
                 <ArrowForwardIos sx={{ color: bggold }} fontSize="small" />
               </IconButton>
             </Box>
+           
             <Box
               className="flex justify-between gap-1  p-2"
               component={NavLink}

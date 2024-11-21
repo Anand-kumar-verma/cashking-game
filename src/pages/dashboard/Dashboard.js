@@ -386,10 +386,10 @@ const getGamnesbyID = async (gameId) => {
                   borderRadius: value === 2 && "10px !important",
                 }}
               >
-                <Box className="h-20  rounded-full" component="img" src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7dLZTf9ByZB8t0KLSUiiqzEOodKnLVou99bOihiVk3diR8cR2tAV6kQM3Ow_2vwmGiZg&usqp=CAU"}></Box>
+                <Box className="rounded-full" component="img" src={alljiligames?.crash?.[0]?.img  || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7dLZTf9ByZB8t0KLSUiiqzEOodKnLVou99bOihiVk3diR8cR2tAV6kQM3Ow_2vwmGiZg&usqp=CAU"}></Box>
               </Box>
               <Typography variant="body1" color="initial" sx={styles.gamecattext}>
-                Slots
+                Crash
               </Typography>
             </NavLink>
             <NavLink onClick={() => handleChange(3)}>
@@ -418,7 +418,7 @@ const getGamnesbyID = async (gameId) => {
                   borderRadius: value === 4 && "10px !important",
                 }}
               >
-                <Box component="img" src={game4}></Box>
+                <Box component="img" src={alljiligames?.tableandcard?.[0]?.img  || game4}></Box>
               </Box>
               <Typography variant="body1" color="initial" sx={styles.gamecattext}>
                 Table & Card
@@ -443,7 +443,7 @@ const getGamnesbyID = async (gameId) => {
                   borderRadius: value === 5 && "10px !important",
                 }}
               >
-                <Box component="img" src={game8}></Box>
+                <Box component="img" src={alljiligames?.slot?.[6]?.img  || game8}></Box>
               </Box>
               <Typography variant="body1" color="initial" sx={styles.gamecattext}>
                 Slot
@@ -459,10 +459,10 @@ const getGamnesbyID = async (gameId) => {
                   borderRadius: value === 6 && "10px !important",
                 }}
               >
-                <Box component="img" src={game7}></Box>
+                <Box component="img" className="!h-20" src={alljiligames?.fish?.[0]?.img  || game7}></Box>
               </Box>
               <Typography variant="body1" color="initial" sx={styles.gamecattext}>
-                Fishing
+                Fish
               </Typography>
             </NavLink>
             <NavLink onClick={() => handleChange(7)}>
@@ -475,7 +475,7 @@ const getGamnesbyID = async (gameId) => {
                   borderRadius: value === 7 && "10px !important",
                 }}
               >
-                <Box component="img" src={game6}></Box>
+                <Box component="img" className="!h-20" src={alljiligames?.data?.[0]?.img  || game6}></Box>
               </Box>
               <Typography variant="body1" color="initial" sx={styles.gamecattext}>
                 Jili games

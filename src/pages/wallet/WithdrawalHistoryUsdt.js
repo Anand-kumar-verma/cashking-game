@@ -13,12 +13,10 @@ import { useQuery } from "react-query";
 import { useNavigate } from "react-router-dom";
 import CustomCircularProgress from "../../Shared/CustomCircularProgress";
 import {
-  bgdarkgray,
-  bggrad,
   zubgback,
   zubgbackgrad,
   zubgmid,
-  zubgtext,
+  zubgtext
 } from "../../Shared/color";
 import deposit from "../../assets/service_feedback.png";
 import Layout from "../../component/Layout/Layout";

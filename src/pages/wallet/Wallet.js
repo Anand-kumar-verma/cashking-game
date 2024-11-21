@@ -8,30 +8,22 @@ import {
 import * as React from "react";
 import ReactApexChart from "react-apexcharts";
 import { useQuery } from "react-query";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import CustomCircularProgress from "../../Shared/CustomCircularProgress";
+import MyModal from "../../Shared/Modal";
 import {
   bgdarkgray,
-  bggrad,
-  zubggray
+  bggrad
 } from "../../Shared/color";
-import deposite from "../../assets/withdrawHistory-fb2bafcf.png";
-import rechargeIcon from "../../assets/rechargeIcon-e515aee4.png";
-import service_guide from "../../assets/rechargeHistory-b5a853c0.png";
 import wallet from "../../assets/images/save_wallet.png";
+import service_guide from "../../assets/rechargeHistory-b5a853c0.png";
+import rechargeIcon from "../../assets/rechargeIcon-e515aee4.png";
 import wallettransfer1 from "../../assets/widthdrawBlue-80197e64.png";
-// import sunlotteryhomebanner from "../../assets/sunlotteryhomebanner.jpg";
-import MyModal from "../../Shared/Modal";
+import deposite from "../../assets/withdrawHistory-fb2bafcf.png";
 import Layout from "../../component/Layout/Layout";
-import { walletamount, yesterdayFn } from "../../services/apicalling";
-import theme from "../../utils/theme";
+import { JiliwalletFn, walletamount, yesterdayFn } from "../../services/apicalling";
 
 function Wallet() {
-
-  const navigate = useNavigate();
-
-  const [openDialogBoxHomeBanner, setopenDialogBoxHomeBanner] =
-    React.useState(false);
 
   const { isLoading, data } = useQuery(["walletamount"], () => walletamount(), {
     refetchOnMount: false,
@@ -43,7 +35,15 @@ function Wallet() {
 
   const series = [(Number(Number(amount?.wallet || 0) % 100) || 0)?.toFixed(2),]
   const series2 = [(Number(Number(amount?.winning || 0) % 100) || 0)?.toFixed(2),];
-  const series1 = [(Number(Number(amount?.working_wallet || 0) % 100) || 0)?.toFixed(2),];
+
+
+  const {data:jili} =useQuery(["Jili_wallet"],()=> JiliwalletFn(),{
+    refetchOnMount: false,
+    refetchOnReconnect: false,
+    retryOnMount: false,
+    refetchOnWindowFocus: false
+  })
+  const jili_wallet = jili?.data?.jilli_wallet_amnt || []
 
   const { data: status } = useQuery(["yesterday_income"], () => yesterdayFn(), {
     refetchOnMount: false,
@@ -109,26 +109,7 @@ function Wallet() {
               width: '100%',
             }}
           >
-            {/* <div class="container">
-              <div class="circles">
-                <div class="circle circle-1"></div>
-                <div class="circle circle-2"></div>
-              </div>
 
-              <div class="card">
-                <div class="visa_logo">
-                  <img src="https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/visa.png" alt="" />
-                </div>
-                <div class="visa_info">
-                  <img src="https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/chip.png" alt="" />
-                  <p>4586 7985 9271 6388</p>
-                </div>
-                <div class="visa_crinfo">
-                  <p>02/12</p>
-                  <p>Nikhil Bobade</p>
-                </div>
-              </div>
-            </div> */}
             <Box
               sx={{
                 display: "flex",
@@ -220,8 +201,7 @@ function Wallet() {
                   series={series}
                   type="radialBar"
                   height={150}
-
-                />
+                 />
                 <Box
                   sx={{
                     textAlign: "center",
@@ -279,14 +259,14 @@ function Wallet() {
                     color="initial"
                     sx={{ color: "black", fontWeight: "500", fontFamily: 'inter !important' }}
                   >
-                    {amount?.winning}
+                    {jili_wallet}
                   </Typography>
                   <Typography
                     variant="body1"
                     color="initial"
                     sx={{ color: "black", fontWeight: "500", fontSize: '13px', fontFamily: 'inter !important' }}
                   >
-                    3rd party wallet
+                    Jili wallet
                   </Typography>
                 </Box>
               </Box>
@@ -297,7 +277,7 @@ function Wallet() {
           <div style={{ padding: '5px', borderRadius: '10px', marginTop: '16px', marginBottom: '100px' }}>
             <Box sx={{
               display: 'flex', flexWrap: 'wrap', alignItems: 'start', justifyContent: 'flex-start', '&>a': { width: '25%', },
-              '&>a>div': { display: 'flex', flexDirection: 'column-reverse', alignItems: 'center', alignItems: 'center', padding: '5px' },
+              '&>a>div': { display: 'flex', flexDirection: 'column-reverse', alignItems: 'center', padding: '5px' },
               'a>div>p': { textAlign: 'center', fontSize: '13px', color: '#9a8f8f', fontFamily: 'inter !important' },
               '&>a>div>img': { width: '65px', filter: 'hue-rotate(-346deg)' },
             }}>
@@ -313,24 +293,6 @@ function Wallet() {
                   <Box component="img" src={wallettransfer1} className="!text-blue-500" ></Box>
                 </div>
               </NavLink>
-              {/* <NavLink to="/add-bank-details">
-                <div className=" " >
-                  <p className=" mt-0">Add Bank</p>
-                  <Box component="img" src={d14} ></Box>
-                </div>
-              </NavLink> */}
-              {/* <NavLink to="/transfer">
-                <div className=" " >
-                  <p className=" mt-0">W to M Wallet Transfer </p>
-                  <Box component="img" src={wallettransfer} ></Box>
-                </div>
-              </NavLink> */}
-              {/* <NavLink to="/transferhistory">
-                <div className=" " >
-                  <p className=" mt-0">W to M Wallet Transfer History </p>
-                  <Box component="img" src={wallettransfer2} ></Box>
-                </div>
-              </NavLink> */}
               <NavLink to="/depositHistory">
                 <div className=" " >
                   <p className=" mt-0">Deposit history</p>
@@ -343,33 +305,9 @@ function Wallet() {
                   <Box component="img" src={deposite} ></Box>
                 </div>
               </NavLink>
-              {/* <NavLink to="/depositusdt">
-                <div className=" " >
-                  <p className=" mt-0">Deposit USDT history</p>
-                  <Box component="img" src={wallettransfer2} ></Box>
-                </div>
-              </NavLink> */}
             </Box>
           </div>
         </Box>
-
-        {/* {openDialogBoxHomeBanner && (
-          <Dialog
-            PaperProps={{ width: "500px", height: "500px" }}
-            open={openDialogBoxHomeBanner}
-          >
-            <div>
-              <p>
-                <IconButton onClick={() => setopenDialogBoxHomeBanner(false)}>
-                  <CloseIcon />
-                </IconButton>
-              </p>
-              <p>
-                <img src={sunlotteryhomebanner} />
-              </p>
-            </div>
-          </Dialog>
-        )} */}
         <CustomCircularProgress isLoading={isLoading} />
         {statusyesterday?.status_of_deposit_popup === 1 ?
           <MyModal />
@@ -381,35 +319,3 @@ function Wallet() {
 }
 
 export default Wallet;
-
-const style = {
-  header: {
-    padding: "5px 8px",
-    background: theme.palette.primary.light,
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-    "& > p": {
-      fontSize: "20px",
-      fontWeight: "500",
-      textAlign: "center",
-      color: "white",
-    },
-    "& > a > svg": {
-      color: "white",
-      fontSize: "35px",
-    },
-  },
-  wthui: {
-    textAlign: "center",
-    width: "31%",
-    minHeight: "15vh",
-    background: zubggray,
-    borderRadius: "10px",
-    mb: "20px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    "&>div>p": { color: "white", fontWeight: 500 },
-  },
-};
