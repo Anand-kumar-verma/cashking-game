@@ -1,11 +1,4 @@
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import MarkEmailReadIcon from "@mui/icons-material/MarkEmailReadOutlined";
-import Person4Icon from '@mui/icons-material/Person4';
-import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
-import PhonelinkLockIcon from "@mui/icons-material/PhonelinkLock";
-import ReceiptIcon from "@mui/icons-material/Receipt";
-import Visibility from "@mui/icons-material/Visibility";
-import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import {
   Box,
   Button,
@@ -21,36 +14,31 @@ import {
   Typography
 } from "@mui/material";
 import axios from "axios";
-import CryptoJS from "crypto-js";
 import { useFormik } from "formik";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 import { useQuery } from "react-query";
 import { NavLink, useNavigate } from "react-router-dom";
 import { flexbetween, flexcenter, flexcenterstart, normalinput, passwordinput } from '../../../Shared/Commom';
-import { storeCookies } from "../../../Shared/CookieStorage";
 import CustomCircularProgress from "../../../Shared/CustomCircularProgress";
 import { signupSchemaValidataon } from "../../../Shared/Validation";
-import { bgcolorlight, bgcolorlight2, bggold, bggrad, bggray } from "../../../Shared/color";
+import { bggold, bggrad, bggray } from "../../../Shared/color";
+import ag_first from "../../../assets/ag_first.png";
+import svgrepo from "../../../assets/copycode.png";
+import emailic from "../../../assets/email_tab.png";
+import viewsvg from "../../../assets/eye_close.png";
+import viewsvg1 from "../../../assets/eye_open.png";
 import flag from "../../../assets/img/flag.png";
 import logo from "../../../assets/img/logo.png";
+import passwordic from "../../../assets/password.png";
+import phoneic from "../../../assets/phone.png";
 import Layout from '../../../component/Layout/Layout';
 import { CandidateNameFn } from "../../../services/apicalling";
 import { endpoint } from "../../../services/urls";
-import theme from '../../../utils/theme';
-import VerifyregistrationOtp from './VerifyregistrationOtp';
-import passwordic from "../../../assets/password.png"
-import emailic from "../../../assets/email_tab.png"
-import svgrepo from "../../../assets/copycode.png"
-import viewsvg1 from "../../../assets/eye_open.png"
-import viewsvg from "../../../assets/eye_close.png"
-import ag_first from "../../../assets/ag_first.png";
-import phoneic from "../../../assets/phone.png";
 
 
 function Register() {
   const navigate = useNavigate();
-  const [isOpenOTPBox, setIsOpenOTPBox] = useState(false);
   const [showPassword, setShowPassword] = React.useState(false);
   const [show_confirm_password, set_show_confirm_password] =
     React.useState(false);
@@ -94,30 +82,24 @@ function Register() {
         // privacy_policy: false,
       }
 
-      Sendotp(reqBody);
+      signupFunction(reqBody);
     },
   });
-  const Sendotp = async (reqbody) => {
+  const signupFunction = async (reqBody) => {
     setloding(true);
     try {
-      const response = await axios.post(endpoint.registration_send_otp, reqbody,
-        {
-          headers: {
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
-          },
+        const response = await axios.post(endpoint.signup, reqBody);
+        if ("Registration Successful." === response?.data?.msg) {
+            toast(response?.data?.msg)
+            navigate("/");
+        } else {
+            toast(response?.data?.msg);
         }
-      );
-      toast.success(response?.data?.msg, { id: 1 });
-      if ("OTP sent Successfully" === response?.data?.msg) {
-        setIsOpenOTPBox(true)
-      }
     } catch (e) {
-      toast.error(e?.message);
-      console.error(e);
+        console.log(e);
     }
     setloding(false);
-  };
+}
 
 
   const { data } = useQuery(
@@ -130,11 +112,8 @@ function Register() {
     }
   );
   const result = data?.data?.data;
-console.log("result",fk)
-
-
   return (
-    isOpenOTPBox ? <VerifyregistrationOtp result={result} newfk={fk} /> :
+    
       <Layout header={false} footer={false}>
         <Box sx={style.authheader}>
           <Container>
