@@ -77,6 +77,7 @@ import CreditAccount from "../pages/wallet/CreditAccount.js";
 import DebitAccount from "../pages/wallet/DebitAccount.js";
 import JiliTransactionHistory from "../pages/wallet/component/JiliTransactionHistory.js";
 import JiliBetHistory from "../pages/wallet/component/JiliBetHistory.js";
+import ComingSoon from "../pages/comingsoon/ComingSoon.js";
 
 export const routes = [
   {
@@ -393,5 +394,9 @@ export const routes = [
   {
     path: "/jili_bet",
     component: <JiliBetHistory/>,
+  },
+  {
+    path: "/comingsoon",
+    component: <ComingSoon/>,
   },
 ];
