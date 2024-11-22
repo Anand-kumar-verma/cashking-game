@@ -92,10 +92,10 @@ function DebitAccount() {
                     <div className="mt-14 w-full bg-white bg-opacity-5 gap-2 p-5">
                         <div className="!flex justify-between !mb-10 p-1" >
                             <div className="!flex !flex-col">
-                                <span className="!text-xs">  Main Wallet : {walletmain?.wallet}</span>
-                                <span className="!text-xs"> Winning Wallet : {walletmain?.winning}</span>
+                                <span className="!text-xs">  Main Wallet : {Number(walletmain?.wallet)?.toFixed(0,2)}</span>
+                                <span className="!text-xs"> Winning Wallet : {Number(walletmain?.winning)?.toFixed(0,2)} </span>
                             </div>
-                            <span className="!text-xs">Jili Wallet : {amount}</span>
+                            <span className="!text-xs">Jili Wallet : {Number(amount)?.toFixed(0,2)}</span>
                         </div>
 
 

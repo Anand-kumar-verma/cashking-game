@@ -45,7 +45,7 @@ function CreditAccount() {
   const initialValues = {
     user_id: "",
     transfer_amount: "",
-    wallet_type: ""
+    wallet_type: "Select Wallet"
   };
 
   const fk = useFormik({
@@ -94,10 +94,10 @@ function CreditAccount() {
           <div className="mt-14 w-full bg-white bg-opacity-5 gap-2 p-5">
             <div className="!flex justify-between !mb-10 p-1" >
               <div className="!flex !flex-col">
-              <span className="!text-xs">  Main Wallet : {amount?.wallet}</span>
-              <span className="!text-xs"> Winning Wallet : {amount?.winning}</span>
+              <span className="!text-xs">  Main Wallet : {Number(amount?.wallet)?.toFixed(0,2)}</span>
+              <span className="!text-xs"> Winning Wallet : {Number(amount?.winning)?.toFixed(0,2)} </span>
               </div>
-              <span className="!text-xs">Jili Wallet : {jili_wallet_Amnt}</span>
+              <span className="!text-xs">Jili Wallet :  {Number(jili_wallet_Amnt)?.toFixed(0,2)}</span>
             </div>
             <div>Select Wallet Type</div>
             <TextField
@@ -109,7 +109,7 @@ function CreditAccount() {
               name="wallet_type"
               value={fk.values.wallet_type}
               onChange={fk.handleChange}
-            >
+            > <MenuItem value="Select Wallet">Select Wallet</MenuItem>
               <MenuItem value={1}>Main Wallet</MenuItem>
               <MenuItem value={2}>Wining Wallet</MenuItem>
             </TextField>
