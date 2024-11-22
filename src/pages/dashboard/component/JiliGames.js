@@ -24,7 +24,7 @@ function JiliGames({alljiligames ,getGamnesbyID}) {
             <Stack direction='row' sx={{ alignItems: 'center', mb: 2 }}>
                 <Box component='img' src={Slot} width={25} ></Box>
                 <Typography variant="body1" color="initial" sx={{ ml: 1, fontSize: '15px', fontWeight: 600 }}>
-                    Jili Games                </Typography>
+            Main Games                </Typography>
             </Stack>
             <Grid container spacing={2}>
                 {alljiligames?.map((item) => {

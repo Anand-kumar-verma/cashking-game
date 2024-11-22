@@ -478,7 +478,7 @@ const getGamnesbyID = async (gameId) => {
                 <Box component="img" className="!h-20" src={alljiligames?.data?.[0]?.img  || game6}></Box>
               </Box>
               <Typography variant="body1" color="initial" sx={styles.gamecattext}>
-                Jili games
+                Main games
                 {/* Mini games */}
               </Typography>
             </NavLink>

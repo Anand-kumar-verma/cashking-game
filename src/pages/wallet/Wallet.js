@@ -213,7 +213,7 @@ function Wallet() {
                     color="initial"
                     sx={{ color: "black", fontWeight: "500", fontFamily: 'inter !important' }}
                   >
-                    {amount?.wallet}
+                    {Number(amount?.wallet)?.toFixed(0,2)}
                   </Typography>
                   <Typography
                     variant="body1"
@@ -259,14 +259,14 @@ function Wallet() {
                     color="initial"
                     sx={{ color: "black", fontWeight: "500", fontFamily: 'inter !important' }}
                   >
-                    {jili_wallet}
+                    {Number(jili_wallet)?.toFixed(0,2)}
                   </Typography>
                   <Typography
                     variant="body1"
                     color="initial"
                     sx={{ color: "black", fontWeight: "500", fontSize: '13px', fontFamily: 'inter !important' }}
                   >
-                    Jili wallet
+                    Game wallet
                   </Typography>
                 </Box>
               </Box>

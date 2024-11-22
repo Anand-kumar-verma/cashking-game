@@ -283,7 +283,7 @@ function Account() {
                 Credit  <br />
                 <span className="!text-xs !text-gray">
                   {" "}
-                 To Jili Account
+                 To Game Account
                 </span>
               </Typography>
             </Box>
@@ -300,7 +300,7 @@ function Account() {
                 Debit <br />
                 <span className="!text-xs !text-gray">
                   {" "}
-                  From Jili Account
+                  From Game Account
                 </span>
               </Typography>
             </Box>
@@ -365,7 +365,7 @@ function Account() {
               <img src={star} alt="" className="w-6" />
             </Typography>
             <Typography className="!mt-1 text-black" sx={{ fontSize: '13px' }}>
-              Jili Transaction History
+              Game Transaction History
             </Typography>
           </Box>
           <IconButton>
@@ -385,7 +385,7 @@ function Account() {
                   <img src={star} alt="" className="w-6" />
                 </Typography>
                 <Typography className="!mt-1 text-black" sx={{ fontSize: '13px' }}>
-                  Jili Bet History
+                  Jili Game History
                 </Typography>
               </Box>
               <IconButton>

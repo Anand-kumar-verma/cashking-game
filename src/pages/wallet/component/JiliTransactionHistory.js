@@ -65,7 +65,7 @@ function JiliTransactionHistory() {
                                 color="initial"
                                 sx={{ fontSize: "15px ", color: "black", ml: "10px" }}
                             >
-                                Jili Transaction History
+                                Game Transaction History
                             </Typography>
                         </Stack>
                         {res?.map((i) => {
@@ -95,7 +95,7 @@ function JiliTransactionHistory() {
                                                     textTransform: "capitalize",
                                                 }}
                                             >
-                                                Jili
+                                                Game
                                             </Button>
                                         </Box>
 
