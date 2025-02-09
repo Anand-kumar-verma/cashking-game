@@ -1,5 +1,5 @@
 
-import { Box, CircularProgress, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -8,10 +8,8 @@ import TableHead from "@mui/material/TableHead";
 import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 import * as React from "react";
-import CustomCircularProgress from "../../../../Shared/CustomCircularProgress";
-import { bggrad, bglightgray, bgtan, lightblue, zubgback, zubgtext } from "../../../../Shared/color";
-import history from '../../../../assets/images/list.png';
 import { useSelector } from "react-redux";
+import { bggrad } from "../../../../Shared/color";
 import theme from "../../../../utils/theme";
 
 

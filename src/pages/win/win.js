@@ -1,13 +1,10 @@
-import VolumeUpIcon from "@mui/icons-material/VolumeUpOutlined";
-import WalletOutlinedIcon from "@mui/icons-material/WalletOutlined";
-import WhatshotIcon from "@mui/icons-material/Whatshot";
 import CancelIcon from "@mui/icons-material/Cancel";
+import VolumeUpIcon from "@mui/icons-material/VolumeUpOutlined";
 import {
   Box,
   Button,
   Container,
   Dialog,
-  Drawer,
   IconButton,
   Stack,
   Typography,
@@ -17,19 +14,18 @@ import { useState } from "react";
 import { useQueryClient } from "react-query";
 import { useSelector } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
-import Timeinactive from "../../assets/time_a-f83ed4c7.png";
 import refresh from "../../assets/images/refresh.png";
 import Timeactive from "../../assets/images/time-.png";
+import Timeinactive from "../../assets/time_a-f83ed4c7.png";
 import walletr from "../../assets/wallet-money-svgrepo-com (3).svg";
-import bg from "../../assets/img/walletbg-dcbd4124.png";
 import Layout from "../../component/Layout/Layout";
-import { bgdarkgray, bggrad, bglightgray, bgtan } from "../../Shared/color";
+import { bggrad } from "../../Shared/color";
 import theme from "../../utils/theme";
 import WinFiveMin from "./component/WinOneMin/WinFiveMin";
 import WinLossPopup from "./component/WinOneMin/WinLossPopup";
 import WinOneMin from "./component/WinOneMin/WinOneMin";
-import WinThreeMin from "./component/WinOneMin/WinThreeMin";
 import WinThirtyMin from "./component/WinOneMin/WinthirtyMin";
+import WinThreeMin from "./component/WinOneMin/WinThreeMin";
 
 function Win() {
   const client = useQueryClient();
@@ -84,13 +80,13 @@ function Win() {
             position: "relative",
             overflow: "hidden",
             py: 2,
-            mt: '-37vh',
+            mt: "-37vh",
           }}
         >
           <Box sx={{ px: 2, pb: 2, position: "relative" }}>
             <Box
               sx={{
-                background: '#fff',
+                background: "#fff",
                 padding: "15px 10px",
                 borderRadius: "10px",
                 my: 0,
@@ -110,7 +106,7 @@ function Win() {
                   ₹{" "}
                   {Number(
                     Number(net_wallet_amount?.wallet || 0) +
-                    Number(net_wallet_amount?.winning || 0) || 0
+                      Number(net_wallet_amount?.winning || 0) || 0
                   )?.toFixed(2)}
                 </Typography>
                 <div
@@ -130,7 +126,12 @@ function Win() {
                 </div>
               </Box>
               <Box display="flex" alignItems="center" mr={5}>
-                <Box component="img" src={walletr} width={25} sx={{ mr: 1, }}></Box>
+                <Box
+                  component="img"
+                  src={walletr}
+                  width={25}
+                  sx={{ mr: 1 }}
+                ></Box>
                 <Typography
                   variant="body1"
                   color="initial"
@@ -171,7 +172,7 @@ function Win() {
               justifyContent: "space-between",
               px: 1,
               py: 1,
-              background: '#fff',
+              background: "#fff",
               borderRadius: "10PX",
               // mt: 2,
               // mb: 2,
@@ -193,7 +194,7 @@ function Win() {
               1.All recharge methods only available in RECHARGE menu on OFFICIAL
             </Typography>
             <Typography
-              sx={{ background: bggrad, color: 'white' }}
+              sx={{ background: bggrad, color: "white" }}
               className=" !text-xs rounded-2xl px-2 py-1 !flex justify-center"
             >
               Details
@@ -207,7 +208,7 @@ function Win() {
             alignItems: "center",
             justifyContent: "space-between",
             margin: "auto",
-            background: 'white',
+            background: "white",
             borderRadius: "10PX",
           }}
         >
@@ -284,7 +285,7 @@ function Win() {
             </NavLink>
           </Box>
         </Box>
-       
+
         {Tab === 1 && <WinOneMin gid="1" />}
         {Tab === 2 && <WinThreeMin gid="2" />}
         {Tab === 3 && <WinFiveMin gid="3" />}
@@ -297,8 +298,6 @@ function Win() {
               style: {
                 backgroundColor: "transparent",
                 boxShadow: "none",
-            
-                
               },
             }}
           >

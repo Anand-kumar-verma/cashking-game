@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box } from "@mui/material";
 import CryptoJS from "crypto-js";
 import { Route, Routes } from "react-router-dom";
 import "../src/index.css";
@@ -12,10 +12,10 @@ import Register from "./pages/auth/register/Register";
 import { routes } from "./routes";
 import BeforeLogin from "./Shared/BeforeLogin";
 import SplashScreen from "./Shared/SplashScreen";
-import Sendotp from './pages/auth/register/Sendotp';
-import VerifyregistrationOtp from './pages/auth/register/VerifyregistrationOtp';
-import LayoutAviator from './GamePage/Layout';
-import PlayGame from './GamePage/PlayGame';
+import Sendotp from "./pages/auth/register/Sendotp";
+import VerifyregistrationOtp from "./pages/auth/register/VerifyregistrationOtp";
+import LayoutAviator from "./GamePage/Layout";
+import PlayGame from "./GamePage/PlayGame";
 
 const App = () => {
   const isAuthenticated =
@@ -28,10 +28,9 @@ const App = () => {
 
   return (
     <Box>
-      
       <Routes>
         <Route path="/" element={<Login />} />
-      <Route path="/before-login" element={<BeforeLogin />}></Route>
+        <Route path="/before-login" element={<BeforeLogin />}></Route>
         <Route path="/forget-password" element={<ForgetPassword />} />
         <Route path="/send-otp" element={<Sendotp />} />
         <Route path="/otp-registration" element={<VerifyregistrationOtp />} />
@@ -39,19 +38,23 @@ const App = () => {
         <Route path="/changepassword" element={<Changepassword />} />
         <Route path="/register" element={<Register />} />
         <Route
-        path="/playgame"
-        element={<LayoutAviator component={<PlayGame />} />}
-      />
+          path="/playgame"
+          element={<LayoutAviator component={<PlayGame />} />}
+        />
         {isAuthenticated ? (
           routes?.map((route, index) => {
             return (
-              <Route key={index} path={route?.path} element={route?.component} />
+              <Route
+                key={index}
+                path={route?.path}
+                element={route?.component}
+              />
             );
           })
         ) : (
           <Route path="/" element={<Login />} />
         )}
-         <Route path="/splash" element={<SplashScreen />}></Route>
+        <Route path="/splash" element={<SplashScreen />}></Route>
       </Routes>
     </Box>
   );

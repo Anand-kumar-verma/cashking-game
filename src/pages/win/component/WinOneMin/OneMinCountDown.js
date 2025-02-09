@@ -36,7 +36,10 @@ import {
   My_All_HistoryFn,
   walletamount,
 } from "../../../../services/apicalling";
-import { changeImages, incrementLargeNumber } from "../../../../services/schedular";
+import {
+  changeImages,
+  incrementLargeNumber,
+} from "../../../../services/schedular";
 import { endpoint } from "../../../../services/urls";
 import Policy from "../policy/Policy";
 
@@ -79,12 +82,19 @@ const OneMinCountDown = ({ fk, setBetNumber }) => {
       setOne_min_time(time_to_be_intro);
       setBetNumber(time_to_be_intro);
       fk.setFieldValue("show_this_one_min_time", time_to_be_intro);
-      if (time_to_be_intro === 5 || time_to_be_intro === 4 || time_to_be_intro === 3 || time_to_be_intro === 2) {
+      if (
+        time_to_be_intro === 5 ||
+        time_to_be_intro === 4 ||
+        time_to_be_intro === 3 ||
+        time_to_be_intro === 2
+      ) {
       }
 
       if (time_to_be_intro <= 10) {
         fk.setFieldValue("openTimerDialogBoxOneMin", true);
-        Number(time_to_be_intro) <= 5 && Number(time_to_be_intro) > 0 && handlePlaySound();
+        Number(time_to_be_intro) <= 5 &&
+          Number(time_to_be_intro) > 0 &&
+          handlePlaySound();
         Number(time_to_be_intro) === 0 && handlePlaySoundLast();
       } else {
         fk.setFieldValue("openTimerDialogBoxOneMin", false);
@@ -230,7 +240,7 @@ const OneMinCountDown = ({ fk, setBetNumber }) => {
                   src={howToPlay}
                   sx={{ width: "20px !important", height: "20px !important" }}
                 ></Box>
-                <Typography variant="body1" sx={{ color: 'white' }}>
+                <Typography variant="body1" sx={{ color: "white" }}>
                   How to play
                 </Typography>
                 <Box
@@ -290,7 +300,10 @@ const OneMinCountDown = ({ fk, setBetNumber }) => {
           </Typography>
           {React.useMemo(() => {
             return (
-              <Stack direction="row" sx={{ justifyContent: 'end', alignItems: 'center' }}>
+              <Stack
+                direction="row"
+                sx={{ justifyContent: "end", alignItems: "center" }}
+              >
                 <Box className="timerBoxone">0</Box>
                 <Box className="timerBox">0</Box>
                 <Box className={"!text-white !font-bold !text-lg"}>:</Box>

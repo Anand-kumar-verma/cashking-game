@@ -152,7 +152,7 @@ function VIPPage() {
           </Box>
           <Typography
             className=" fp13 fw400"
-            sx={{ fontFamily: "inter !important", }}
+            sx={{ fontFamily: "inter !important" }}
             py={1}
             mb={1}
           >
@@ -180,7 +180,7 @@ function VIPPage() {
           </Box>
           <Typography
             className=" fp13 fw400"
-            sx={{ fontFamily: "inter !important", }}
+            sx={{ fontFamily: "inter !important" }}
             py={1}
             mb={1}
           >
@@ -205,7 +205,7 @@ function VIPPage() {
           </Box>
           <Typography
             className=" fp13 fw400"
-            sx={{ fontFamily: "inter !important", }}
+            sx={{ fontFamily: "inter !important" }}
             py={1}
             mb={1}
           >
@@ -231,7 +231,7 @@ function VIPPage() {
           </Box>
           <Typography
             className=" fp13 fw400"
-            sx={{ fontFamily: "inter !important", }}
+            sx={{ fontFamily: "inter !important" }}
             py={1}
             mb={1}
           >
@@ -259,7 +259,7 @@ function VIPPage() {
           </Box>
           <Typography
             className=" fp13 fw400"
-            sx={{ fontFamily: "inter !important", }}
+            sx={{ fontFamily: "inter !important" }}
             py={1}
             mb={1}
           >
@@ -284,7 +284,7 @@ function VIPPage() {
           </Box>
           <Typography
             className=" fp13 fw400"
-            sx={{ fontFamily: "inter !important", }}
+            sx={{ fontFamily: "inter !important" }}
             py={1}
             mb={1}
           >
@@ -313,7 +313,7 @@ function VIPPage() {
           </Box>
           <Typography
             className=" fp13 fw400"
-            sx={{ fontFamily: "inter !important", }}
+            sx={{ fontFamily: "inter !important" }}
             py={1}
             mb={1}
           >
@@ -337,7 +337,7 @@ function VIPPage() {
           </Box>
           <Typography
             className=" fp13 fw400"
-            sx={{ fontFamily: "inter !important", }}
+            sx={{ fontFamily: "inter !important" }}
             py={1}
             mb={1}
           >
@@ -345,7 +345,7 @@ function VIPPage() {
             additional benefits on safe deposit based on the member's VIP level.
           </Typography>
         </Card>
-      </Box >
+      </Box>
     );
   };
   return (
@@ -398,16 +398,16 @@ function VIPPage() {
             <Typography variant="body1" sx={styles.vipStatValue}>
               {res?.[activeSlide]?.l01_date
                 ? res_monthly?.[activeSlide]?.l01_transection_type
-                  ?.split(" ")
-                  ?.includes("Monthly")
+                    ?.split(" ")
+                    ?.includes("Monthly")
                   ? "Achieved"
                   : new Date(
-                    new Date().getFullYear(),
-                    new Date().getMonth() + 1,
-                    0
-                  ).getDate() -
-                  Number(moment(res?.[activeSlide]?.l01_date)?.format("DD")) +
-                  "Days"
+                      new Date().getFullYear(),
+                      new Date().getMonth() + 1,
+                      0
+                    ).getDate() -
+                    Number(moment(res?.[activeSlide]?.l01_date)?.format("DD")) +
+                    "Days"
                 : "N/A"}{" "}
               {/* - moment(res?.[activeSlide]?.l01_date)?.format("YYYY") */}
             </Typography>
@@ -499,7 +499,7 @@ function VIPPage() {
                 ></Typography>
                 <Typography
                   variant="body2"
-                  sx={{ color: "white", fontFamily: "inter !important", }}
+                  sx={{ color: "white", fontFamily: "inter !important" }}
                 >
                   VIP 1
                 </Typography>
@@ -589,7 +589,7 @@ function VIPPage() {
                 ></Typography>
                 <Typography
                   variant="body2"
-                  sx={{ color: "white", fontFamily: "inter !important", }}
+                  sx={{ color: "white", fontFamily: "inter !important" }}
                 >
                   VIP 2
                 </Typography>
@@ -679,7 +679,7 @@ function VIPPage() {
                 ></Typography>
                 <Typography
                   variant="body2"
-                  sx={{ color: "white", fontFamily: "inter !important", }}
+                  sx={{ color: "white", fontFamily: "inter !important" }}
                 >
                   VIP 3
                 </Typography>
@@ -769,7 +769,7 @@ function VIPPage() {
                 ></Typography>
                 <Typography
                   variant="body2"
-                  sx={{ color: "white", fontFamily: "inter !important", }}
+                  sx={{ color: "white", fontFamily: "inter !important" }}
                 >
                   VIP 4
                 </Typography>
@@ -859,7 +859,7 @@ function VIPPage() {
                 ></Typography>
                 <Typography
                   variant="body2"
-                  sx={{ color: "white", fontFamily: "inter !important", }}
+                  sx={{ color: "white", fontFamily: "inter !important" }}
                 >
                   VIP 5
                 </Typography>
@@ -950,7 +950,7 @@ function VIPPage() {
                 ></Typography>
                 <Typography
                   variant="body2"
-                  sx={{ color: "white", fontFamily: "inter !important", }}
+                  sx={{ color: "white", fontFamily: "inter !important" }}
                 >
                   VIP 1
                 </Typography>
@@ -1041,7 +1041,7 @@ function VIPPage() {
                 ></Typography>
                 <Typography
                   variant="body2"
-                  sx={{ color: "white", fontFamily: "inter !important", }}
+                  sx={{ color: "white", fontFamily: "inter !important" }}
                 >
                   VIP 7
                 </Typography>
@@ -1132,7 +1132,7 @@ function VIPPage() {
                 ></Typography>
                 <Typography
                   variant="body2"
-                  sx={{ color: "white", fontFamily: "inter !important", }}
+                  sx={{ color: "white", fontFamily: "inter !important" }}
                 >
                   VIP 8
                 </Typography>
@@ -1223,7 +1223,7 @@ function VIPPage() {
                 ></Typography>
                 <Typography
                   variant="body2"
-                  sx={{ color: "white", fontFamily: "inter !important", }}
+                  sx={{ color: "white", fontFamily: "inter !important" }}
                 >
                   VIP 9
                 </Typography>
@@ -1314,7 +1314,7 @@ function VIPPage() {
                 ></Typography>
                 <Typography
                   variant="body2"
-                  sx={{ color: "white", fontFamily: "inter !important", }}
+                  sx={{ color: "white", fontFamily: "inter !important" }}
                 >
                   VIP 10
                 </Typography>
@@ -1359,7 +1359,7 @@ function VIPPage() {
               <Card style={styles.card}>
                 <CardContent style={styles.cardcontent}>
                   <Typography variant="h6" sx={styles.titlec} className="fcs">
-                    <DiamondOutlinedIcon sx={{ color: 'red', mr: 1 }} /> VIP1
+                    <DiamondOutlinedIcon sx={{ color: "red", mr: 1 }} /> VIP1
                     Benefits level
                   </Typography>
                   <Box>
@@ -1373,7 +1373,11 @@ function VIPPage() {
                         <Box>
                           <Typography
                             variant="body1"
-                            sx={{ lineHeight: "5px", color: 'black', fontFamily: "inter !important", }}
+                            sx={{
+                              lineHeight: "5px",
+                              color: "black",
+                              fontFamily: "inter !important",
+                            }}
                           >
                             Level up rewards
                           </Typography>
@@ -1414,7 +1418,11 @@ function VIPPage() {
                         <Box>
                           <Typography
                             variant="body1"
-                            sx={{ lineHeight: "20px", color: 'black', fontFamily: "inter !important", }}
+                            sx={{
+                              lineHeight: "20px",
+                              color: "black",
+                              fontFamily: "inter !important",
+                            }}
                           >
                             Monthly reward
                           </Typography>
@@ -1455,7 +1463,11 @@ function VIPPage() {
                         <Box>
                           <Typography
                             variant="body1"
-                            sx={{ lineHeight: "5px", color: 'black', fontFamily: "inter !important", }}
+                            sx={{
+                              lineHeight: "5px",
+                              color: "black",
+                              fontFamily: "inter !important",
+                            }}
                           >
                             Rebate rate
                           </Typography>
@@ -1490,7 +1502,7 @@ function VIPPage() {
               <Card style={styles.card}>
                 <CardContent style={styles.cardcontent}>
                   <Typography variant="h6" sx={styles.titlec} className="fcs">
-                    <DiamondOutlinedIcon sx={{ color: 'red', mr: 1 }} /> VIP2
+                    <DiamondOutlinedIcon sx={{ color: "red", mr: 1 }} /> VIP2
                     Benefits level
                   </Typography>
                   <Box>
@@ -1504,7 +1516,11 @@ function VIPPage() {
                         <Box>
                           <Typography
                             variant="body1"
-                            sx={{ lineHeight: "5px", color: 'black', fontFamily: "inter !important", }}
+                            sx={{
+                              lineHeight: "5px",
+                              color: "black",
+                              fontFamily: "inter !important",
+                            }}
                           >
                             Level up rewards
                           </Typography>
@@ -1545,7 +1561,11 @@ function VIPPage() {
                         <Box>
                           <Typography
                             variant="body1"
-                            sx={{ lineHeight: "20px", color: 'black', fontFamily: "inter !important", }}
+                            sx={{
+                              lineHeight: "20px",
+                              color: "black",
+                              fontFamily: "inter !important",
+                            }}
                           >
                             Monthly reward
                           </Typography>
@@ -1586,7 +1606,11 @@ function VIPPage() {
                         <Box>
                           <Typography
                             variant="body1"
-                            sx={{ lineHeight: "5px", color: 'black', fontFamily: "inter !important", }}
+                            sx={{
+                              lineHeight: "5px",
+                              color: "black",
+                              fontFamily: "inter !important",
+                            }}
                           >
                             Rebate rate
                           </Typography>
@@ -1621,7 +1645,7 @@ function VIPPage() {
               <Card style={styles.card}>
                 <CardContent style={styles.cardcontent}>
                   <Typography variant="h6" sx={styles.titlec} className="fcs">
-                    <DiamondOutlinedIcon sx={{ color: 'red', mr: 1 }} /> VIP3
+                    <DiamondOutlinedIcon sx={{ color: "red", mr: 1 }} /> VIP3
                     Benefits level
                   </Typography>
                   <Box>
@@ -1635,7 +1659,11 @@ function VIPPage() {
                         <Box>
                           <Typography
                             variant="body1"
-                            sx={{ lineHeight: "5px", color: 'black', fontFamily: "inter !important", }}
+                            sx={{
+                              lineHeight: "5px",
+                              color: "black",
+                              fontFamily: "inter !important",
+                            }}
                           >
                             Level up rewards
                           </Typography>
@@ -1676,7 +1704,11 @@ function VIPPage() {
                         <Box>
                           <Typography
                             variant="body1"
-                            sx={{ lineHeight: "20px", color: 'black', fontFamily: "inter !important", }}
+                            sx={{
+                              lineHeight: "20px",
+                              color: "black",
+                              fontFamily: "inter !important",
+                            }}
                           >
                             Monthly reward
                           </Typography>
@@ -1717,7 +1749,11 @@ function VIPPage() {
                         <Box>
                           <Typography
                             variant="body1"
-                            sx={{ lineHeight: "5px", color: 'black', fontFamily: "inter !important", }}
+                            sx={{
+                              lineHeight: "5px",
+                              color: "black",
+                              fontFamily: "inter !important",
+                            }}
                           >
                             Rebate rate
                           </Typography>
@@ -1752,7 +1788,7 @@ function VIPPage() {
               <Card style={styles.card}>
                 <CardContent style={styles.cardcontent}>
                   <Typography variant="h6" sx={styles.titlec} className="fcs">
-                    <DiamondOutlinedIcon sx={{ color: 'red', mr: 1 }} /> VIP4
+                    <DiamondOutlinedIcon sx={{ color: "red", mr: 1 }} /> VIP4
                     Benefits level
                   </Typography>
                   <Box>
@@ -1766,7 +1802,11 @@ function VIPPage() {
                         <Box>
                           <Typography
                             variant="body1"
-                            sx={{ lineHeight: "5px", color: 'black', fontFamily: "inter !important", }}
+                            sx={{
+                              lineHeight: "5px",
+                              color: "black",
+                              fontFamily: "inter !important",
+                            }}
                           >
                             Level up rewards
                           </Typography>
@@ -1807,7 +1847,11 @@ function VIPPage() {
                         <Box>
                           <Typography
                             variant="body1"
-                            sx={{ lineHeight: "20px", color: 'black', fontFamily: "inter !important", }}
+                            sx={{
+                              lineHeight: "20px",
+                              color: "black",
+                              fontFamily: "inter !important",
+                            }}
                           >
                             Monthly reward
                           </Typography>
@@ -1848,7 +1892,11 @@ function VIPPage() {
                         <Box>
                           <Typography
                             variant="body1"
-                            sx={{ lineHeight: "5px", color: 'black', fontFamily: "inter !important", }}
+                            sx={{
+                              lineHeight: "5px",
+                              color: "black",
+                              fontFamily: "inter !important",
+                            }}
                           >
                             Rebate rate
                           </Typography>
@@ -1883,7 +1931,7 @@ function VIPPage() {
               <Card style={styles.card}>
                 <CardContent style={styles.cardcontent}>
                   <Typography variant="h6" sx={styles.titlec} className="fcs">
-                    <DiamondOutlinedIcon sx={{ color: 'red', mr: 1 }} /> VIP5
+                    <DiamondOutlinedIcon sx={{ color: "red", mr: 1 }} /> VIP5
                     Benefits level
                   </Typography>
                   <Box>
@@ -1897,7 +1945,11 @@ function VIPPage() {
                         <Box>
                           <Typography
                             variant="body1"
-                            sx={{ lineHeight: "5px", color: 'black', fontFamily: "inter !important", }}
+                            sx={{
+                              lineHeight: "5px",
+                              color: "black",
+                              fontFamily: "inter !important",
+                            }}
                           >
                             Level up rewards
                           </Typography>
@@ -1938,7 +1990,11 @@ function VIPPage() {
                         <Box>
                           <Typography
                             variant="body1"
-                            sx={{ lineHeight: "20px", color: 'black', fontFamily: "inter !important", }}
+                            sx={{
+                              lineHeight: "20px",
+                              color: "black",
+                              fontFamily: "inter !important",
+                            }}
                           >
                             Monthly reward
                           </Typography>
@@ -1979,7 +2035,11 @@ function VIPPage() {
                         <Box>
                           <Typography
                             variant="body1"
-                            sx={{ lineHeight: "5px", color: 'black', fontFamily: "inter !important", }}
+                            sx={{
+                              lineHeight: "5px",
+                              color: "black",
+                              fontFamily: "inter !important",
+                            }}
                           >
                             Rebate rate
                           </Typography>
@@ -2014,7 +2074,7 @@ function VIPPage() {
               <Card style={styles.card}>
                 <CardContent style={styles.cardcontent}>
                   <Typography variant="h6" sx={styles.titlec} className="fcs">
-                    <DiamondOutlinedIcon sx={{ color: 'red', mr: 1 }} /> VIP6
+                    <DiamondOutlinedIcon sx={{ color: "red", mr: 1 }} /> VIP6
                     Benefits level
                   </Typography>
                   <Box>
@@ -2028,7 +2088,11 @@ function VIPPage() {
                         <Box>
                           <Typography
                             variant="body1"
-                            sx={{ lineHeight: "5px", color: 'black', fontFamily: "inter !important", }}
+                            sx={{
+                              lineHeight: "5px",
+                              color: "black",
+                              fontFamily: "inter !important",
+                            }}
                           >
                             Level up rewards
                           </Typography>
@@ -2069,7 +2133,11 @@ function VIPPage() {
                         <Box>
                           <Typography
                             variant="body1"
-                            sx={{ lineHeight: "20px", color: 'black', fontFamily: "inter !important", }}
+                            sx={{
+                              lineHeight: "20px",
+                              color: "black",
+                              fontFamily: "inter !important",
+                            }}
                           >
                             Monthly reward
                           </Typography>
@@ -2110,7 +2178,11 @@ function VIPPage() {
                         <Box>
                           <Typography
                             variant="body1"
-                            sx={{ lineHeight: "5px", color: 'black', fontFamily: "inter !important", }}
+                            sx={{
+                              lineHeight: "5px",
+                              color: "black",
+                              fontFamily: "inter !important",
+                            }}
                           >
                             Rebate rate
                           </Typography>
@@ -2145,7 +2217,7 @@ function VIPPage() {
               <Card style={styles.card}>
                 <CardContent style={styles.cardcontent}>
                   <Typography variant="h6" sx={styles.titlec} className="fcs">
-                    <DiamondOutlinedIcon sx={{ color: 'red', mr: 1 }} /> VIP7
+                    <DiamondOutlinedIcon sx={{ color: "red", mr: 1 }} /> VIP7
                     Benefits level
                   </Typography>
                   <Box>
@@ -2159,7 +2231,11 @@ function VIPPage() {
                         <Box>
                           <Typography
                             variant="body1"
-                            sx={{ lineHeight: "5px", color: 'black', fontFamily: "inter !important", }}
+                            sx={{
+                              lineHeight: "5px",
+                              color: "black",
+                              fontFamily: "inter !important",
+                            }}
                           >
                             Level up rewards
                           </Typography>
@@ -2200,7 +2276,11 @@ function VIPPage() {
                         <Box>
                           <Typography
                             variant="body1"
-                            sx={{ lineHeight: "20px", color: 'black', fontFamily: "inter !important", }}
+                            sx={{
+                              lineHeight: "20px",
+                              color: "black",
+                              fontFamily: "inter !important",
+                            }}
                           >
                             Monthly reward
                           </Typography>
@@ -2241,7 +2321,11 @@ function VIPPage() {
                         <Box>
                           <Typography
                             variant="body1"
-                            sx={{ lineHeight: "5px", color: 'black', fontFamily: "inter !important", }}
+                            sx={{
+                              lineHeight: "5px",
+                              color: "black",
+                              fontFamily: "inter !important",
+                            }}
                           >
                             Rebate rate
                           </Typography>
@@ -2276,7 +2360,7 @@ function VIPPage() {
               <Card style={styles.card}>
                 <CardContent style={styles.cardcontent}>
                   <Typography variant="h6" sx={styles.titlec} className="fcs">
-                    <DiamondOutlinedIcon sx={{ color: 'red', mr: 1 }} /> VIP8
+                    <DiamondOutlinedIcon sx={{ color: "red", mr: 1 }} /> VIP8
                     Benefits level
                   </Typography>
                   <Box>
@@ -2290,7 +2374,11 @@ function VIPPage() {
                         <Box>
                           <Typography
                             variant="body1"
-                            sx={{ lineHeight: "5px", color: 'black', fontFamily: "inter !important", }}
+                            sx={{
+                              lineHeight: "5px",
+                              color: "black",
+                              fontFamily: "inter !important",
+                            }}
                           >
                             Level up rewards
                           </Typography>
@@ -2331,7 +2419,11 @@ function VIPPage() {
                         <Box>
                           <Typography
                             variant="body1"
-                            sx={{ lineHeight: "20px", color: 'black', fontFamily: "inter !important", }}
+                            sx={{
+                              lineHeight: "20px",
+                              color: "black",
+                              fontFamily: "inter !important",
+                            }}
                           >
                             Monthly reward
                           </Typography>
@@ -2372,7 +2464,11 @@ function VIPPage() {
                         <Box>
                           <Typography
                             variant="body1"
-                            sx={{ lineHeight: "5px", color: 'black', fontFamily: "inter !important", }}
+                            sx={{
+                              lineHeight: "5px",
+                              color: "black",
+                              fontFamily: "inter !important",
+                            }}
                           >
                             Rebate rate
                           </Typography>
@@ -2407,7 +2503,7 @@ function VIPPage() {
               <Card style={styles.card}>
                 <CardContent style={styles.cardcontent}>
                   <Typography variant="h6" sx={styles.titlec} className="fcs">
-                    <DiamondOutlinedIcon sx={{ color: 'red', mr: 1 }} /> VIP9
+                    <DiamondOutlinedIcon sx={{ color: "red", mr: 1 }} /> VIP9
                     Benefits level
                   </Typography>
                   <Box>
@@ -2421,7 +2517,11 @@ function VIPPage() {
                         <Box>
                           <Typography
                             variant="body1"
-                            sx={{ lineHeight: "5px", color: 'black', fontFamily: "inter !important", }}
+                            sx={{
+                              lineHeight: "5px",
+                              color: "black",
+                              fontFamily: "inter !important",
+                            }}
                           >
                             Level up rewards
                           </Typography>
@@ -2462,7 +2562,11 @@ function VIPPage() {
                         <Box>
                           <Typography
                             variant="body1"
-                            sx={{ lineHeight: "20px", color: 'black', fontFamily: "inter !important", }}
+                            sx={{
+                              lineHeight: "20px",
+                              color: "black",
+                              fontFamily: "inter !important",
+                            }}
                           >
                             Monthly reward
                           </Typography>
@@ -2503,7 +2607,11 @@ function VIPPage() {
                         <Box>
                           <Typography
                             variant="body1"
-                            sx={{ lineHeight: "5px", color: 'black', fontFamily: "inter !important", }}
+                            sx={{
+                              lineHeight: "5px",
+                              color: "black",
+                              fontFamily: "inter !important",
+                            }}
                           >
                             Rebate rate
                           </Typography>
@@ -2538,7 +2646,7 @@ function VIPPage() {
               <Card style={styles.card}>
                 <CardContent style={styles.cardcontent}>
                   <Typography variant="h6" sx={styles.titlec} className="fcs">
-                    <DiamondOutlinedIcon sx={{ color: 'red', mr: 1 }} /> VIP10
+                    <DiamondOutlinedIcon sx={{ color: "red", mr: 1 }} /> VIP10
                     Benefits level
                   </Typography>
                   <Box>
@@ -2552,7 +2660,11 @@ function VIPPage() {
                         <Box>
                           <Typography
                             variant="body1"
-                            sx={{ lineHeight: "5px", color: 'black', fontFamily: "inter !important", }}
+                            sx={{
+                              lineHeight: "5px",
+                              color: "black",
+                              fontFamily: "inter !important",
+                            }}
                           >
                             Level up rewards
                           </Typography>
@@ -2593,7 +2705,11 @@ function VIPPage() {
                         <Box>
                           <Typography
                             variant="body1"
-                            sx={{ lineHeight: "20px", color: 'black', fontFamily: "inter !important", }}
+                            sx={{
+                              lineHeight: "20px",
+                              color: "black",
+                              fontFamily: "inter !important",
+                            }}
                           >
                             Monthly reward
                           </Typography>
@@ -2634,7 +2750,11 @@ function VIPPage() {
                         <Box>
                           <Typography
                             variant="body1"
-                            sx={{ lineHeight: "5px", color: 'black', fontFamily: "inter !important", }}
+                            sx={{
+                              lineHeight: "5px",
+                              color: "black",
+                              fontFamily: "inter !important",
+                            }}
                           >
                             Rebate rate
                           </Typography>
@@ -2735,21 +2855,23 @@ function VIPPage() {
                         flexDirection: "column",
                         color: "#ccc",
                         background: bggrad,
-                        borderRadius: '10px',
+                        borderRadius: "10px",
                         fontFamily: "inter !important",
                       }}
                       className={" !p-2"}
                     >
                       <>
                         <div className="!w-full !flex !flex-row !justify-between">
-                          <p style={{ fontFamily: "inter !important", }}>VIP BONUS</p>
-                          <p style={{ fontFamily: "inter !important", }}>
+                          <p style={{ fontFamily: "inter !important" }}>
+                            VIP BONUS
+                          </p>
+                          <p style={{ fontFamily: "inter !important" }}>
                             {rupees} {i?.l01_amount}
                           </p>
                         </div>
                         <div className="!w-full !flex !flex-row !justify-between">
-                          <p style={{ fontFamily: "inter !important", }}>Date</p>
-                          <p style={{ fontFamily: "inter !important", }}>
+                          <p style={{ fontFamily: "inter !important" }}>Date</p>
+                          <p style={{ fontFamily: "inter !important" }}>
                             {moment(i?.l01_date)?.format("DD-MM-YYYY HH:mm:ss")}
                           </p>
                         </div>
@@ -2763,11 +2885,10 @@ function VIPPage() {
                 variant="contained"
                 sx={{
                   width: "80%",
-                  background:
-                    bggrad,
+                  background: bggrad,
                   borderRadius: "50px",
                   marginLeft: "10%",
-                  color: 'white',
+                  color: "white",
                   padding: "7px0",
                   my: 5,
                   textTransform: "capitalize",
@@ -2789,8 +2910,8 @@ function VIPPage() {
           </Box>
         </Fade>
         <Box sx={{ py: 1 }}></Box>
-      </Box >
-    </Layout >
+      </Box>
+    </Layout>
   );
 }
 
@@ -2823,7 +2944,7 @@ const styles = {
   vipInfo: { display: "flex", alignItems: "center", justifyContent: "start" },
   vipAvatar: { width: 60, height: 60, marginRight: "8px" },
   vipBadge: { marginRight: "4px", width: "60px" },
-  vipName: { fontFamily: "inter !important", },
+  vipName: { fontFamily: "inter !important" },
   vipStats: {
     display: "flex",
     justifyContent: "space-between",
@@ -2839,7 +2960,11 @@ const styles = {
     borderRadius: "8px",
     width: "47%",
   },
-  vipStatValue: { fontFamily: "inter !important", fontWeight: "bold", color: 'black' },
+  vipStatValue: {
+    fontFamily: "inter !important",
+    fontWeight: "bold",
+    color: "black",
+  },
   vipStatLabel: { color: "gray" },
   vipLevelContainer: {
     borderRadius: "8px",
@@ -2912,7 +3037,7 @@ const styles = {
     fontFamily: "inter !important",
   },
   card: {
-    background: 'white',
+    background: "white",
     marginTop: "16px",
     borderRadius: "10px",
     boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
@@ -2924,7 +3049,7 @@ const styles = {
     fontFamily: "inter !important",
     display: "flex",
     alignItems: "center",
-    color: 'black'
+    color: "black",
   },
   rewardBox: {
     display: "flex",
@@ -2955,7 +3080,7 @@ const styles = {
   },
   emp1: { width: "250px", margin: "auto", filter: "brightness(0.5)" },
   rulebox: {
-    backgroundColor: '#E7E7E7',
+    backgroundColor: "#E7E7E7",
     color: "gray",
     borderRadius: 2,
     boxShadow: "none",
@@ -2968,6 +3093,6 @@ const styles = {
     padding: "4px 8px",
     textAlign: "center",
     margin: "auto",
-    color: 'black !important'
+    color: "black !important",
   },
 };
